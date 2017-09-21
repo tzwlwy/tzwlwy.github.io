@@ -5,6 +5,8 @@ title:  "正则总结"
 tags: [总结]
 ---
 
+*对于不熟悉正则的同学来说，需要对比关照正则一些符号才更为直观，暂时未放图片，更多请访问印象笔记
+
 <pre><code>import re
 tt = "Tina is a good girl, she is cOOl, clever, and so on..."
 rr = re.compile(r'\w*oo\w*',flags=re.I)
