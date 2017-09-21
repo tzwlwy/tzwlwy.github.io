@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "read"
+category: "other"
 title:  "铭记于心"
 tags: [经历,人生]
 ---
