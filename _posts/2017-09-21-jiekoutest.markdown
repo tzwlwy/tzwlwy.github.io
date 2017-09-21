@@ -4,8 +4,6 @@ category: "tags"
 title:  "正则总结"
 tags: [总结]
 ---
-### 
-
 
 <pre><code>import re
 tt = "Tina is a good girl, she is cOOl, clever, and so on..."
@@ -41,7 +39,8 @@ w = re.findall('(?P<id>\d)abc(?P=id)','aa1121abc121aa2')
 print(w)
 w = re.findall(r'(\d)abc\1','5abc522abc4')
 //引用编号为<number>的分组匹配到字符串，也就是说数字abc数字，前后数字需保持一致
-print(w)</code></pre>
+print(w)
+</code></pre>
 
 <pre><code>import re
 result = re.match('you', 'Young Frankenstein')
@@ -108,8 +107,6 @@ print(b)
 ['23']
 </code></pre>
 
-
-
 <pre><code>import re
 a = "123abc456d"
 print(re.search("([0-9]*)([a-z]*)([0-9]*)d",a).groups())   #groups 返回的是一个元祖，由除了group（0）之外的元素组成
@@ -132,14 +129,3 @@ for i in iter:
 (31, 33)
 print(re.split('\d+','one1two2three3four4five5'))
 ['one', 'two', 'three', 'four', 'five', '']</code></pre>
-'''
-
-
-
-
-
-
-
-
-
-
