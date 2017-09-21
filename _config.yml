@@ -17,7 +17,7 @@ all_categories: [
 ["other", "其它","/posts/other.html"],
 ]
 
-paginate: 7
+paginate: 1
 paginate_path: "posts/page:num"
 timezone: America/Los_Angeles
 
