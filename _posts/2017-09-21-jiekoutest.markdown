@@ -7,24 +7,22 @@ tags: [总结]
 ### 
 
 
-import re
+<pre><code>import re
 tt = "Tina is a good girl, she is cOOl, clever, and so on..."
 rr = re.compile(r'\w*oo\w*',flags=re.I)
-print(rr.findall(tt))   #查找所有包含'oo'的单词
+print(rr.findall(tt))   #查找所有包含'oo'的单词</code></pre>
 
-
-
-import re
+<pre><code>import re
 a=re.search(r'(tina)(fei)haha\2','tinafeihahafei tinafeihahatina').group()
-#\2 表示取()里面的第二个值，如果改为\1，则匹配tian
-#a= tinafeihahafei
+//\2 表示取()里面的第二个值，如果改为\1，则匹配tian
+//a= tinafeihahafei
 print(a)
 d=re.search(r'(tina)(fei)haha','tinafeihahafei tinafeihahatina').group()
-#这边这么写的话仅取值包含正则的内容
-#d = tinafeihaha
+//这边这么写的话仅取值包含正则的内容
+//d = tinafeihaha
 print(d)
 
-#这里需要强调一下\b的单词边界的理解：
+//这里需要强调一下\b的单词边界的理解：
 w = re.findall('\btina','tian tinaaaa')
 print(w)
 s = re.findall(r'\btina','tian tinaaaa')
@@ -34,22 +32,18 @@ print(v)
 a = re.findall(r'\btina\b','#tina@aaa')
 print(a)
 
-#正则特殊分组法
+//正则特殊分组法
 w = re.findall('(?P<name>aa)1','tian tinaa1aa')
-#这里find 的是 aa1 ，然后输出的内容是aa；
+//这里find 的是 aa1 ，然后输出的内容是aa；
 print(w)
 w = re.findall('(?P<id>\d)abc(?P=id)','aa1121abc121aa2')
-#这里find 的是 数字abc数字 ，前后数字需要保持一致，然后输出的内容是那个数字；
+//这里find 的是 数字abc数字 ，前后数字需要保持一致，然后输出的内容是那个数字；
 print(w)
 w = re.findall(r'(\d)abc\1','5abc522abc4')
-#引用编号为<number>的分组匹配到字符串，也就是说数字abc数字，前后数字需保持一致
-print(w)
+//引用编号为<number>的分组匹配到字符串，也就是说数字abc数字，前后数字需保持一致
+print(w)</code></pre>
 
-
-
-
-import re
-
+<pre><code>import re
 result = re.match('you', 'Young Frankenstein')
 source = 'Young Frankensteinn1n'
 m = re.match('You', source)
@@ -57,9 +51,9 @@ print(m, type(m))
 print(m.group(), type(m.group()))
 
 m = re.match('.*Frank', source)  #这样返回到需求为止的所有字符串
-#  使用. 代表任意除\n 外的字符；
-#  使用* 表示任意多个字符（包括0 个）；
-#  使用? 表示可选字符（0 个或1 个）
+// 使用. 代表任意除\n 外的字符；
+// 使用* 表示任意多个字符（包括0 个）；
+//使用? 表示可选字符（0 个或1 个）**
 if m:
     print(m.group())
 
@@ -85,40 +79,12 @@ m=re.findall('I (?=wish)', source2)# 查询以I 开头，后面跟着wish 的匹
 m=re.findall('\bfish', source2) #输出为 空,因为/b被转义了
 m=re.findall(r'\bfish', source2)#/b 表示前面或者后面一个是字母，一个不是，我们现在写的就是前面不是字母，后面是字母
 m=m = re.search(r'(. dish\b).*(\bfish)', source2) #search 返回的是一个object，取它的值需要print她的group（）
-
 print(m)
 print(m.group())
 print(m.groups())
+</code></pre>
 
-import re
-a = "123abc456d"
-print(re.search("([0-9]*)([a-z]*)([0-9]*)d",a).groups())   #groups 返回的是一个元祖，由除了group（0）之外的元素组成
-print(re.search("([0-9]*)([a-z]*)([0-9]*d)",a).group(0))   #123abc456,返回整体
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(1))   #123
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(2))   #abc
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(3))   #456
-###group(1) 列出第一个括号匹配部分，group(2) 列出第二个括号匹配部分，group(3) 列出第三个括号匹配部分。
-
-
-iter = re.finditer(r'\d+','12 drumm44ers drumming, 11 ... 10 ...')
-for i in iter:
-    print(i)
-    print(i.group())
-    print(i.span())
-# 执行结果如下：
-# <_sre.SRE_Match object; span=(0, 2), match='12'>
-# (0, 2)
-# <_sre.SRE_Match object; span=(8, 10), match='44'>
-# (8, 10)
-# <_sre.SRE_Match object; span=(24, 26), match='11'>
-# (24, 26)
-# <_sre.SRE_Match object; span=(31, 33), match='10'>
-# (31, 33)
-print(re.split('\d+','one1two2three3four4five5'))
-#['one', 'two', 'three', 'four', 'five', '']
-
-
-re.match与re.search与re.findall的区别：
+<pre><code>re.match与re.search与re.findall的区别：
 re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配。
 
 a=re.search('[\d]',"abc33").group()
@@ -140,11 +106,40 @@ print(b)
 执行结果：
 ['2']
 ['23']
+</code></pre>
 
-a = re.match('<(.*)>','<H1>title<H1>').group()
-print(a)
-b = re.match('<(.*?)>','<H1>title<H1>').group()
-print(b)
-执行结果：
-<H1>title<H1>
-<H1>
+
+
+<pre><code>import re
+a = "123abc456d"
+print(re.search("([0-9]*)([a-z]*)([0-9]*)d",a).groups())   #groups 返回的是一个元祖，由除了group（0）之外的元素组成
+print(re.search("([0-9]*)([a-z]*)([0-9]*d)",a).group(0))   #123abc456,返回整体
+print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(1))   #123
+print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(2))   #abc
+print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(3))   #456
+//group(1) 列出第一个括号匹配部分，group(2) 列出第二个括号匹配部分，group(3) 列出第三个括号匹配部分。
+
+iter = re.finditer(r'\d+','12 drumm44ers drumming, 11 ... 10 ...')
+for i in iter:
+    //print(i)
+    print(i.group())
+    print(i.span())
+执行结果如下：
+'''
+(0, 2)
+(8, 10)
+(24, 26)
+(31, 33)
+print(re.split('\d+','one1two2three3four4five5'))
+['one', 'two', 'three', 'four', 'five', '']</code></pre>
+'''
+
+
+
+
+
+
+
+
+
+
