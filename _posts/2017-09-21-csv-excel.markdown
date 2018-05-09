@@ -1,0 +1,35 @@
+---
+layout: default
+category: "python"
+title:  "csv,excel交互"
+tags: [python]
+---
+
+dict 转csv：（适用于dict组成的list，且dict的key值一样）
+
+import csv
+
+def WriteDictToCSV(csv_file, dict_data):
+    try:
+        csv_columns = dict_data[0].keys()
+        with open(csv_file, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns, delimiter=',', lineterminator='\n')
+            writer.writeheader()
+            for data in dict_data:
+                writer.writerow(data)
+    except IOError as e:
+        print(e)
+    return
+
+villains = [
+    {'first': 'Doctor', 'last': 'No'},
+    {'first': 'Rosa', 'last': 'Klebb'},
+    {'first': 'Mister', 'last': 'Big'},
+    {'first': 'Auric', 'last': 'Goldfinger'},
+    {'first': 'Ernst', 'last': 'Blofeld'},
+]
+
+WriteDictToCSV('dict_to_csv.csv2', villains)
+
+
+
