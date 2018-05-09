@@ -5,8 +5,9 @@ title:  "csv,excel交互"
 tags: [python]
 ---
 
-dict 转csv：（适用于dict组成的list，且dict的key值一样）
 
+**dict 转csv：（适用于dict组成的list，且dict的key值一样）：**
+<pre><code>
 import csv
 
 def WriteDictToCSV(csv_file, dict_data):
@@ -30,6 +31,7 @@ villains = [
 ]
 
 WriteDictToCSV('dict_to_csv.csv2', villains)
+</code></pre>
 
 
 
