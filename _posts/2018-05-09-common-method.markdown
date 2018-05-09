@@ -6,7 +6,7 @@ tags: [python]
 ---
 
 
-**dict 转csv：（适用于dict组成的list，且dict的key值一样）：**
+**一些共用的方法收集放在这里**
 <pre><code>
 def list_to_tuple(list):
     if len(list)==1:
