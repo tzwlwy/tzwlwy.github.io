@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "tags"
+category: "interface"
 title:  "正则总结"
 tags: [总结]
 ---
