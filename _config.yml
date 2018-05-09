@@ -4,16 +4,15 @@ permalink: /posts/:title.html
 excerpt_separator: "<!-- more -->"
 
 github: tzwlwy
-author: "王焱"
+author: "tzwlwy"
 email: 13758216976@163.com
-name: "王焱个人博客"
+name: "tzwlwy's blog"
 url: https://tzwlwy.github.io/
 all_categories: [
-["python", "python自动化","/posts/android.html"], 
-["program", "jmeter接口","/posts/program.html"],
-["web", "jmeter性能","/posts/web.html"], 
-["linux", "Linux相关","/posts/linux.html"],
-["read", "CS自动化","/posts/read.html"], 
+["python", "python","/posts/python.html"],
+["flask", "jmeter","/posts/flask.html"],
+["linux", "Linux","/posts/linux.html"],
+["performance", "自动化","/posts/performance.html"],
 ["other", "其它","/posts/other.html"],
 ]
 
