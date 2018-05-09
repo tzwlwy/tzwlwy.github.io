@@ -10,7 +10,8 @@ name: "tzwlwy's blog"
 url: https://tzwlwy.github.io/
 all_categories: [
 ["python", "python","/posts/python.html"],
-["flask", "jmeter","/posts/flask.html"],
+["jmeter", "jmeter","/posts/jmeter.html"],
+["flask", "flask","/posts/flask.html"],
 ["linux", "Linux","/posts/linux.html"],
 ["performance", "自动化","/posts/performance.html"],
 ["other", "其它","/posts/other.html"],
