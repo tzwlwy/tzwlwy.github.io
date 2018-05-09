@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "interface"
+category: "python"
 title:  "正则总结"
 tags: [总结]
 ---
