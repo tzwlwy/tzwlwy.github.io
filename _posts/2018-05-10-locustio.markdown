@@ -12,11 +12,8 @@ pip install locustio
 </code></pre>
 在cmd界面输入 locust --help来观察是否安装成功  
 
- 
-
 ![img](/img/python/locust1.png)
 ![img](/img/python/locust2.png)
-
 
 运行写好的代码
 <pre><code>
@@ -25,16 +22,20 @@ locust -f E:\yiguo_program\InterfaceTesting\shiyan.py --host=https://www.baidu.c
 第二种方式可能会报错，是因为有的版本不支持 -t 所以只可以这么写  
 locust -f E:\yiguo_program\InterfaceTesting\shiyan.py --host=https://www.baidu.com --no-web -c 10 -r 2
 </code></pre>
-locust参数详解
-![img](/img/python/locust3.png)
-![img](/img/python/locust4.png)
 
+<pre><code>
 启动参数：
 http://localhost:8089
 –no-web 表示不使用Web界面运行测试。
 -c 设置虚拟用户数。
 -r 设置每秒启动虚拟用户数。
 -t 设置设置运行时间
+</code></pre>
+locust参数详解
+![img](/img/python/locust3.png)
+![img](/img/python/locust4.png)
+
+
 
 
 `
