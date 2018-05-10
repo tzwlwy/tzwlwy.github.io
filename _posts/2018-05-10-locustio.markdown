@@ -15,7 +15,7 @@ pip install locustio
 
   
 ![img](/img/in-post/python/locust1.png)  
-![img](/img/in-post/python/locust2.png)
+![img](/img/in-post/python/locust1.png)
 
 运行写好的代码
 <pre><code>
