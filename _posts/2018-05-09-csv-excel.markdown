@@ -34,4 +34,141 @@ WriteDictToCSV('dict_to_csv.csv2', villains)
 </code></pre>
 
 
+**读取csv文件，转换为字典或者list：（只要在循环里面改变就可以实现）**
+<pre><code>
+import csv
+import os
+
+def ReadCSVasDict(csv_file):
+    try:
+        csv_list = []
+        with open(csv_file) as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                print(row)
+                print(row['first'], row['last'])
+                csv_list.append([row['first'], row['last']])
+    except IOError as e:
+        print(e)
+    return csv_list
+
+currentPath = os.getcwd()
+csv_file = currentPath + "/dict_to_csv"
+c = ReadCSVasDict(csv_file)
+print(c)
+WriteDictToCSV('dict_to_csv', villains)
+</code></pre>
+
+
+**Excel读取数据（可以转list或者dict）方式1**
+<pre><code>
+import xlrd
+class XIUserinfo(object):
+    def __init__(self, path=''):
+        self.xl = xlrd.open_workbook(path)  # 打开文件路径
+
+    def floattostr(self, val):  # 这个方法是把小数点去掉，可以不用
+        if isinstance(val, float):
+            val = str(int(val))
+        return val
+
+    def get_listkey(self):  # 把第一行作为listkey
+        listkey = []
+        for row in range(0, 1):
+            info1 = [self.floattostr(val) for val in self.sheet.row_values(row)]
+            listkey.append(list(info1))
+            print(listkey)
+        return listkey
+
+    def get_sheet_info(self):
+        infolist = []
+        for row in range(0, 1):  # 读取第一行数据
+            listkey = [self.floattostr(val) for val in self.sheet.row_values(row)]
+        for row in range(1, self.sheet.nrows):  # 读取第一行以后的数据，把每一行的数据都变为字典的形式
+            rows = self.sheet.nrows
+            info = [self.floattostr(val) for val in self.sheet.row_values(row)]
+            tmp = zip(listkey, info)
+            infolist.append(dict(tmp))
+        return infolist, listkey, rows  # 返回数据
+
+    def get_sheetinfo_by_name(self, name):  # 获取数据的两种方式，这个是通过获取excel表的名字来读取数据
+        self.sheet = self.xl.sheet_by_name(name)
+        return self.get_sheet_info()
+
+    def get_sheetinfo_by_index(self, index):  # 获取数据的两种方式，这个是通过获取excel表的索引来读取数据
+        self.sheet = self.xl.sheet_by_index(index)
+        return self.get_sheet_info()  # 这里返回get_sheet_info()方法
+
+if __name__ == "__main__":
+    xinfo = XIUserinfo(r'E:\yiguo_program\InterfaceTesting\20170925股票数据.xlsx')
+    info = xinfo.get_sheetinfo_by_index(0)
+    # print(info)
+
+</code></pre>
+
+**Excel读取数据（可以转list或者dict）方式2**
+<pre><code>
+import xlrd
+def get_excel_data_to_list(file, line=0, by_index=0):
+    data = xlrd.open_workbook(file)
+    table = data.sheets()[by_index]
+    nrows = table.nrows  # 行数
+    line_data = table.row_values(line)  # 某一行数据,第一次取默认值0
+    list = []
+    for rownum in range(1, nrows):
+        row = table.row_values(rownum)  # 每一行的数据，返回的是list
+        # 如果row有数据，那么把每一个数据以字典返回
+        if row:
+            temporary_dict = {}
+            for i in range(len(line_data)):
+                temporary_dict[line_data[i]] = row[i]
+            list.append(temporary_dict)
+    return list
+</code></pre>
+
+
+**Excel读取数据（可以转list或者dict）方式2**
+<pre><code>
+import xlrd
+import xlsxwriter
+
+
+def get_excel_data_to_list(file, line=0, by_index=0):
+    data = xlrd.open_workbook(file)
+    table = data.sheets()[by_index]
+    nrows = table.nrows  # 行数
+    line_data = table.row_values(line)  # 某一行数据,第一次取默认值0
+    list = []
+    for rownum in range(1, nrows):
+        row = table.row_values(rownum)  # 每一行的数据，返回的是list
+        # 如果row有数据，那么把每一个数据以字典返回
+        if row:
+            temporary_dict = {}
+            for i in range(len(line_data)):
+                temporary_dict[line_data[i]] = row[i]
+            list.append(temporary_dict)
+    return list
+
+
+def data_to_excel(data, excel_name='data_to_excel.xlsx', sheet_name='sheet1'):
+    # data = get_excel_data_to_list(file)
+    myfile = xlsxwriter.Workbook(excel_name)
+    sheet = myfile.add_worksheet(sheet_name)
+    # 得到listkey
+    list2 = [list(data[0].keys())]
+    # 把每一行的数据得到，返回一个列表组成的列表
+    for every_dict_value in data:
+        list2.append(list(every_dict_value.values()))
+    for i in range(len(list2)):
+        num = 0
+        for each_table in list2[i]:
+            sheet.write(i, num, each_table)
+            num += 1
+    myfile.close()
+
+data_to_excel(get_excel_data_to_list(r'E:\yiguo_program\InterfaceTesting\20170925股票数据.xlsx'))
+
+
+</code></pre>
+
 
