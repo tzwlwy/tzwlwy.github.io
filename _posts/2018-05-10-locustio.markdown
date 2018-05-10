@@ -11,7 +11,7 @@ tags: [总结]
 pip install locustio  
 </code></pre>
 在cmd界面输入 locust --help来观察是否安装成功  
-
+  
 ![img](/img/in-post/python/locust1.png)  
 ![img](/img/in-post/python/locust2.png)
 
