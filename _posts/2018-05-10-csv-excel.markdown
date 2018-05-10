@@ -10,7 +10,7 @@ tags: [python]
 <pre><code>
 ```python
 import csv
-
+112
 def WriteDictToCSV(csv_file, dict_data):
     try:
         csv_columns = dict_data[0].keys()
