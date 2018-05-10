@@ -12,8 +12,8 @@ pip install locustio
 </code></pre>
 在cmd界面输入 locust --help来观察是否安装成功  
 
-![img](/img/python/locust1.png)
-![img](/img/python/locust2.png)
+![img](/img/in-post/python/locust1.png)  
+![img](/img/in-post/python/locust2.png)
 
 运行写好的代码
 <pre><code>
@@ -32,8 +32,8 @@ http://localhost:8089
 -t 设置设置运行时间
 </code></pre>
 locust参数详解
-![img](/img/python/locust3.png)
-![img](/img/python/locust4.png)
+![img](/img/in-post/python/locust3.png)  
+![img](/img/in-post/python/locust4.png)
 
 
 
