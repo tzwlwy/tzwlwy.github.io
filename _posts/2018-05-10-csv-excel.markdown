@@ -1,5 +1,5 @@
 ---
-layout: post2
+layout: post
 category: "python"
 title:  "csv,excel交互"
 tags: [python]
