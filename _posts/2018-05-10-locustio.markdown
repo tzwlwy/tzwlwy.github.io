@@ -5,9 +5,11 @@ title:  "locust学习"
 tags: [总结]
 ---
 
-
-专注python，所以特地来学一下这个基于python的locust性能测试
-首先安装locust包
-pip install locustio
+专注python，所以特地来学一下这个基于python的locust性能测试  
+首先安装locust包  
+pip install locustio  
+在cmd界面输入 locust --help来观察是否安装成功  
+接下来就开始代码搞起来  
+首先介绍一下
 
 `
