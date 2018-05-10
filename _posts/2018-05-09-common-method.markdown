@@ -46,6 +46,7 @@ def perform_sql_to_list(sql,DB=DBSessionQAWMS_ALL(),list_number=1):
 ```
 
 ```python
+import requests
 def requests_QA(sql,data):
     '''
     encode报文，避免报错
