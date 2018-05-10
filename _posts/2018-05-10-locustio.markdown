@@ -1,0 +1,11 @@
+---
+layout: post
+category: "python"
+title:  "locust学习"
+tags: [总结]
+---
+性能测试比较low，被刘总建议使用locust，在这里记录一些心得
+首先安装locust包
+pip install locustio
+
+`
