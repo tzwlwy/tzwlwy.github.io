@@ -10,7 +10,6 @@ tags: [python]
 
 ```python
 import csv
-123
 def WriteDictToCSV(csv_file, dict_data):
     try:
         csv_columns = dict_data[0].keys()
@@ -37,7 +36,7 @@ WriteDictToCSV('dict_to_csv.csv2', villains)
 
 
 **读取csv文件，转换为字典或者list：（只要在循环里面改变就可以实现）**
-<pre><code>
+```python
 import csv
 import os
 
@@ -57,13 +56,11 @@ def ReadCSVasDict(csv_file):
 currentPath = os.getcwd()
 csv_file = currentPath + "/dict_to_csv"
 c = ReadCSVasDict(csv_file)
-print(c)
-WriteDictToCSV('dict_to_csv', villains)
-</code></pre>
+```
 
 
 **Excel读取数据（可以转list或者dict）方式1**
-<pre><code>
+```python
 import xlrd
 class XIUserinfo(object):
     def __init__(self, path=''):
@@ -106,10 +103,10 @@ if __name__ == "__main__":
     info = xinfo.get_sheetinfo_by_index(0)
     # print(info)
 
-</code></pre>
+```
 
 **Excel读取数据（可以转list或者dict）方式2**
-<pre><code>
+```python
 import xlrd
 def get_excel_data_to_list(file, line=0, by_index=0):
     data = xlrd.open_workbook(file)
@@ -126,11 +123,11 @@ def get_excel_data_to_list(file, line=0, by_index=0):
                 temporary_dict[line_data[i]] = row[i]
             list.append(temporary_dict)
     return list
-</code></pre>
+```
 
 
 **Excel读取数据（可以转list或者dict）方式2**
-<pre><code>
+```python
 import xlrd
 import xlsxwriter
 
@@ -171,6 +168,6 @@ def data_to_excel(data, excel_name='data_to_excel.xlsx', sheet_name='sheet1'):
 data_to_excel(get_excel_data_to_list(r'E:\yiguo_program\InterfaceTesting\20170925股票数据.xlsx'))
 
 
-</code></pre>
+```
 
 

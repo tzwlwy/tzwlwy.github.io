@@ -7,17 +7,17 @@ tags: [python]
 
 
 **一些共用的方法收集放在这里**
-<pre><code>
+```python
 def list_to_tuple(list):
     if len(list)==1:
         list_0=list[0]
         return "('"+list_0+"')"
     else:
         return tuple(list)
-</code></pre>
+```
 
 
-<pre><code>
+```python
 def perform_sql_to_list(sql,DB=DBSessionQAWMS_ALL(),list_number=1):
     '''
     根据传入的参数返回list number数，传入不为1的list_number则生成多个
@@ -43,9 +43,9 @@ def perform_sql_to_list(sql,DB=DBSessionQAWMS_ALL(),list_number=1):
             list_tem.append(list_i)
         return list_tem
 
-</code></pre>
+```
 
-<pre><code>
+```python
 def requests_QA(sql,data):
     '''
     encode报文，避免报错
@@ -55,9 +55,9 @@ def requests_QA(sql,data):
     '''
     response = requests.post(sql, data=data.encode('utf-8'))
     return  response.text
-</code></pre>
+```
 
-<pre><code>
+```python
 def update_sql(sql,DB=DBSessionQAWMS_ALL()):
     '''
     更新sql，这边需要DB方法连接数据库
@@ -67,7 +67,6 @@ def update_sql(sql,DB=DBSessionQAWMS_ALL()):
     '''
     DB.execute(sql)
     DB.commit()
-</code></pre>
-
+```
 
 

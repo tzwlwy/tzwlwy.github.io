@@ -8,16 +8,18 @@ tags: [总结]
 *对于不熟悉正则的同学来说，需要对比关照正则一些符号才更为直观，暂时未放图片，更多请访问印象笔记
 
 
-<pre><code>
+```python
 import re
 tt = "Tina is a good girl, she is cOOl, clever, and so on..."
 rr = re.compile(r'\w*oo\w*',flags=re.I)
-print(rr.findall(tt))   #查找所有包含'oo'的单词</code></pre>
+print(rr.findall(tt))   #查找所有包含'oo'的单词
+```
 
-<pre><code>import re
+```python
+import re
 a=re.search(r'(tina)(fei)haha\2','tinafeihahafei tinafeihahatina').group()
-//\2 表示取()里面的第二个值，如果改为\1，则匹配tian
-//a= tinafeihahafei
+// \2 表示取()里面的第二个值，如果改为\1，则匹配tian
+// a= tinafeihahafei
 print(a)
 d=re.search(r'(tina)(fei)haha','tinafeihahafei tinafeihahatina').group()
 //这边这么写的话仅取值包含正则的内容
@@ -44,9 +46,8 @@ print(w)
 w = re.findall(r'(\d)abc\1','5abc522abc4')
 //引用编号为<number>的分组匹配到字符串，也就是说数字abc数字，前后数字需保持一致
 print(w)
-</code></pre>
 
-<pre><code>import re
+import re
 result = re.match('you', 'Young Frankenstein')
 source = 'Young Frankensteinn1n'
 m = re.match('You', source)
@@ -85,9 +86,9 @@ m=m = re.search(r'(. dish\b).*(\bfish)', source2) #search 返回的是一个obje
 print(m)
 print(m.group())
 print(m.groups())
-</code></pre>
 
-<pre><code>re.match与re.search与re.findall的区别：
+
+re.match与re.search与re.findall的区别：
 re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配。
 
 a=re.search('[\d]',"abc33").group()
@@ -109,9 +110,10 @@ print(b)
 执行结果：
 ['2']
 ['23']
-</code></pre>
+```
 
-<pre><code>import re
+```python
+import re
 a = "123abc456d"
 print(re.search("([0-9]*)([a-z]*)([0-9]*)d",a).groups())   #groups 返回的是一个元祖，由除了group（0）之外的元素组成
 print(re.search("([0-9]*)([a-z]*)([0-9]*d)",a).group(0))   #123abc456,返回整体
@@ -125,6 +127,8 @@ for i in iter:
     //print(i)
     print(i.group())
     print(i.span())
+```
+<pre><code>
 执行结果如下：
 '''
 (0, 2)
