@@ -31,13 +31,13 @@ http://localhost:8089
 
 locust参数详解  
 
-![img](/img/in-post/python/locust2.png){:height="300px" width="200px"}  
+![img](/img/in-post/python/locust2.png){:height="1000px" width="800px"}  
 
-![img](/img/in-post/python/locust2.png){:height="300px" width="200px"}  
+![img](/img/in-post/python/locust2.png) 
 
-![img](/img/in-post/python/locust3.png){:height="300px" width="200px"}  
+![img](/img/in-post/python/locust3.png)
 
-![img](/img/in-post/python/locust4.png){:height="300px" width="200px"}
+![img](/img/in-post/python/locust4.png)
 
 
 
