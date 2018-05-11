@@ -31,9 +31,10 @@ http://localhost:8089
 
 locust参数详解
 <img src="/img/in-post/python/locust1.png" width = "300" height = "200" alt="图片名称" align=center />
-![img](/img/in-post/python/locust2.png)
-![img](/img/in-post/python/locust3.png)  
-![img](/img/in-post/python/locust4.png)
+![img](/img/in-post/python/locust2.png){:height="100px" width="400px"}
+![img](/img/in-post/python/locust2.png){:height="100px" width="400px"}
+![img](/img/in-post/python/locust3.png){:height="100px" width="400px"}
+![img](/img/in-post/python/locust4.png){:height="100px" width="400px"}
 
 
 
