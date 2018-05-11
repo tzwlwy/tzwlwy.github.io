@@ -29,12 +29,12 @@ http://localhost:8089
 -t 设置设置运行时间
 </code></pre>
 
-locust参数详解
-<img src="/img/in-post/python/locust1.png" width = "300" height = "200" alt="图片名称" align=center />
-![img](/img/in-post/python/locust2.png){:height="100px" width="400px"}
-![img](/img/in-post/python/locust2.png){:height="100px" width="400px"}
-![img](/img/in-post/python/locust3.png){:height="100px" width="400px"}
-![img](/img/in-post/python/locust4.png){:height="100px" width="400px"}
+locust参数详解  
+
+![img](/img/in-post/python/locust2.png){:height="1000px" width="4000px"}
+![img](/img/in-post/python/locust2.png){:height="1000px" width="4000px"}
+![img](/img/in-post/python/locust3.png){:height="1000px" width="4000px"}
+![img](/img/in-post/python/locust4.png){:height="1000px" width="4000px"}
 
 
 
