@@ -18,7 +18,7 @@ def list_to_tuple(list):
 
 
 ```python
-def perform_sql_to_list(sql,DB=DBSessionQAWMS_ALL(),list_number=1):
+def perform_sql_to_list(sql,DB=DBSession(),list_number=1):
     '''
     根据传入的参数返回list number数，传入不为1的list_number则生成多个
     list组成的list
@@ -59,7 +59,7 @@ def requests_QA(sql,data):
 ```
 
 ```python
-def update_sql(sql,DB=DBSessionQAWMS_ALL()):
+def update_sql(sql,DB=DBSession()):
     '''
     更新sql，这边需要DB方法连接数据库
     :param sql:
