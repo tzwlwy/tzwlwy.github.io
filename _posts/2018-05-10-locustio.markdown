@@ -30,8 +30,10 @@ http://localhost:8089
 </code></pre>
 
 locust参数详解  
- 
-![img](/img/in-post/python/locust1.jpg)  
+<div style="align: center">
+ <img src="/img/in-post/python/locust1.jpg"/>
+</div> 
+
 ![img](/img/in-post/python/locust2.jpg)  
 ![img](/img/in-post/python/locust3.jpg)  
 ![img](/img/in-post/python/locust4.jpg)  
