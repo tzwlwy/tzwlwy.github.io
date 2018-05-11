@@ -29,8 +29,8 @@ http://localhost:8089
 -t 设置设置运行时间
 </code></pre>
 
-locust参数详解  
-<div style="align: center">
+locust参数详解 123 
+<div style="align: left">
  <img src="/img/in-post/python/locust1.jpg"/>
 </div> 
 
