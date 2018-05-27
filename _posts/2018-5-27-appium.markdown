@@ -1,0 +1,84 @@
+---
+layout: post
+category: "performance"
+title:  "appium随笔总结"
+tags: [总结]
+---
+
+
+
+```python
+# coding=utf-8
+
+from appium import webdriver
+import time
+def swipeUp(driver, t=500, n=1):
+    '''
+    封装swipe方法，开启指针获取当前元素的位置会更好
+    :param driver:
+    :param t:滑行时间，单位是ms
+    :param n:滑动次数
+    :return:
+    '''
+    mobile_size = driver.get_window_size()
+    x1 = mobile_size['width'] * 0.5 # x坐标
+    y1 = mobile_size['height'] * 0.75 # 起始y坐标
+    y2 = mobile_size['height'] * 0.25 # 终点y坐标
+    for i in range(n):
+         driver.swipe(x1, y1, x1, y2, t)
+
+
+
+desired_caps = {
+    'platformName': 'Android',
+    'deviceName': 'cfd1c24b',
+    'platformVersion': '8.1',
+    # apk包名
+    'appPackage': 'com.taobao.taobao',
+    # apk的launcherActivity
+    'appActivity': 'com.taobao.tao.welcome.Welcome',
+    #unicodeKeyboard是使用unicode编码方式发送字符串
+    'unicodeKeyboard': True,
+    #resetKeyboard是将键盘隐藏起来
+    'resetKeyboard': True
+}
+driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+print("finish")
+# driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+# 休眠五秒等待页面加载完成
+time.sleep(2)
+try:
+    # 格式：driver.find_element_by_id("这里是resource-id")
+    # 格式：driver.find_element_by_name("这里是text")
+    # driver.find_element_by_class_name("class属性")
+    # accessibility_id定位就是通过UI Automator工具查看的content - desc属性
+    driver.find_element_by_id("com.taobao.taobao:id/home_searchedit").click()
+    driver.find_element_by_id("com.taobao.taobao:id/home_searchedit").send_keys(u'shuru') #不知道不加u行不行
+    contexts = driver.contexts  #类似selenium 里面的handle，一些定位不到元素是因为套用了webview，需要进行切换
+    driver.switch_to.context(contexts[1]) #切换到第二个handle
+    now = driver.current_context #查看当前handle
+    #ps：需要查找webview里面的元素查看appium自动化入门-python上海-悠悠博客园104页，真用到的时候还可以看一下
+    #已放硬盘 appium目录下
+    #108页模拟器
+    # 获取屏幕的size
+    size = driver.get_window_size()
+    print(size)
+    # 屏幕宽度width
+    print(size['width'])
+    # 屏幕高度width
+    print(size['height'])
+    #模拟手指点击，这个方法是最终办法，需要计算分辨率，list里面是bonds属性，估计是坐标一类的
+     #后面的参数是点击时间，单位是ms
+    driver.tap([(374, 831), (654, 906)], 500)
+    driver.shake()#摇晃手机
+    #其他查看appium api  https://blog.csdn.net/bear_w/article/details/50330565
+except:
+    print("failed")
+driver.quit()
+
+
+```
+
+
+
+
