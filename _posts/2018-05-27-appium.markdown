@@ -2,7 +2,7 @@
 layout: post
 category: "performance"
 title:  "appium随笔总结"
-tags: [总结]
+tags: [appium][python]
 ---
 
 
