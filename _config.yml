@@ -14,7 +14,7 @@ all_categories: [
 ["flask", "flask","/posts/flask.html"],
 ["linux", "Linux","/posts/linux.html"],
 ["performance", "自动化","/posts/performance.html"],
-["other", "其它","/posts/other.html"],
+["other", "随笔","/posts/other.html"],
 ]
 
 paginate: 1
