@@ -75,9 +75,28 @@ try:
 except:
     print("failed")
 driver.quit()
-
-
 ```
+**一些常用的adb命令**
+<pre><code>
+adb devices
+adb install app的路径 （安装app）
+adb uninstall 包名
+1.杀掉adb进程
+adb kill-server 2.重启adb服务 adb start-server
+3.重启手机 adb reboot
+4.进shell模式
+adb shell
+5.挂载
+adb remount
+6.从电脑发文件到手机
+adb push <本地路径> <远程路径>
+7.从手机下载文件到本地
+adb pull <远程路径> <本地路径>
+8.输出日志
+第一种：输出到手机存储卡
+adb logcat > /sdcard/mylogcat.txt
+第二种：输出到电脑上 adb logcat > D:/Temp/1.txt（1.txt必须在电脑上存在，才能写入logcat内容）
+</code></pre>
 
 
 
