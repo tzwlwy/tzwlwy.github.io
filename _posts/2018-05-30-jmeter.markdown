@@ -30,7 +30,124 @@ sql的话一般适用于一个sql就可以查询到你需要的数据，并且�
 ![img](/img/in-post/jmeter/jmeter.png)
 
 
+**jmeter部分控件总结**
+<pre><code>
+原文地址：https://www.cnblogs.com/ceshisanren/p/5639895.html
+Property Display （这个可以查看很多系统信息及jmeter信息）
+创建方式：右键点击工作台，添加——非测试元件——Property Display
+
+线程组：
+理解：一个虚拟用户组，线程组内线程数量在运行过程中不会发生改变。
+
+注意事项：线程间变量相互独立。一个测试计划内可以包含多个线程组。
+
+可定义内容：
+
+取样器错误后执行的操作：继续执行，启动下一个线程，停止线程，停止测试，立刻停止
+
+线程属性：线程数量，线程启动间隔时间（0为立刻启动所有线程），单线程循环次数，线程执行顺序，是否使用调度器。
+
+调度器配置：持续时间，启动延迟，启动时间，结束时间
+
+Ramp-up Period（in seconds）：
+决定多长时间启动所有线程。如果使用10个线程，ramp-up period是100秒，那么JMeter用100秒使所有10个线程启动并运行。每个线程会在上一个线程启动后10秒（100/10）启动。
+Ramp-up需要要充足长以避免在启动测试时有一个太大的工作负载，并且要充足小以至于最后一个线程在第一个完成前启动。  一般设置ramp-up=线程数启动，并上下调整到所需的。
+
+delay thread creation until needed勾选
+直到需要时创建线程 可以延迟线程的创建 减少不必要的资源损失
+
+调度器
+设置调度器时，他会根据时间进行运行
 
 
+SetUp Thread Group：类似python里面的setup，初始化的时候运行
+TearDown Thread Group：类似python里面的teardown，结束的时候运行
 
 
+Test Fragment：
+  理解：与线程组同级别，但是默认不会执行。只有当他被模块控制器引用的时候才会被执行。（可以简单理解为不能执行的线程组）
+  
+  
+逻辑控制器（Logic Controller）
+理解：用来控制采样器的执行顺序
+
+简单控制器（Simple Controller）
+ 没啥用，用来分割的。并不具有任何的逻辑控制或运行时的功能。 
+ 循环控制器（Loop Controller）：
+ 1、Forever选项：勾选上这一项表示一直循环下去
+
+2、如果同时设置了线程组的循环次数和循环控制器的循环次数，那循环控制器的子节点运行的次数为两个数值相乘的结果。
+
+仅一次控制器（Once Only Controller）：
+作用：在测试计划执行期间，该控制器下的子结点对每个线程只执行一次，登录场景经常会使用到这个控制器。
+
+注意：将Once Only Controller作为Loop Controller（循环控制器）的子节点，Once Only Controller在每次循环的第一次迭代时均会被执行。 
+
+ForEach控制器（ForEach Controller）：
+ForEach控制器一般和用户自定义变量一起使用，其在用户自定义变量中读取一系列相关的变量。该控制器下的采样器或控制器都会被执行一次或多次，每次读取不同的变量
+Name：ForEach控制器的名字
+Input Variable Prefix：输入变量前缀  
+Output variable name：输出变量名称  
+Start index for loop(exclusive)：循环开始的索引（这里如果不填写，默认从1开始，如果没有1开始的变量，执行时会报错）
+End index for loop(inclusive)：循环结束的索引
+Add"_"before number：输入变量名称中是否使用"_"进行间隔。
+
+这个是这么玩的，Output variable name = Input Variable Prefix + ‘-’+索引 ，然后返回Output variable name 作为变量名输出
+
+
+事务控制器（Transaction Controller）：
+作用： 事务控制器会生产一个额外的采样器，用来统计该控制器子结点的所有时间。
+Generate parent sample：生成这个控制器是否为父节点，勾选样本在这个控制器下面，不勾选则为平级
+
+If 控制器（If Controller）：
+ 　　作用：根据给定表达式的值决定是否执行该节点下的子节点
+Interpret Condition as Variable Expression?：选中这一项时表示：判断变量值是否等于字符串true（不区分大小写）
+Evaluate for all children：如果选中这一项，在每个子结点执行前都会计算表达式 ，如果勾选了，会一直传递这个值，类似在if循环里一直定义一个变量
+
+
+Switch控制器（Switch Controller）：类似switch，case
+作用：Switch控制器通过给该控制器中的Value赋值，来指定运行哪个采样器。有两种赋值方式：
+
+第一种是数值，Switch控制器下的子节点从0开始计数，通过指定子节点所在的数值来确定执行哪个元素。
+第二种是直接指定子元素的名称，比如采样器的Name来进行匹配。当指定的名称不存在时，不执行任何元素。
+当Value为空时，默认执行第1个子节点元素。 
+
+吞吐量控制器(Throughput Controller):
+ 　　作用：控制其下的子节点的执行次数与负载比例分配，也有两种方式：
+Total Executions：设置运行次数
+Percent Executions：设置运行比例(1~100之间）
+这个是否跟线程组叠加还是冲突需要实验一下!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+随机控制器(Random Controller):
+ 　　作用：随机执行其下的所某个子结点
+
+ 随机顺序控制器(Random Order Controller):
+ 　　作用：随机执行其下的所有子结点
+ 
+ 
+ 配置元件（Config Element）：
+ CSV Data Set Config
+ CSV Data Set Config各个参数的简要说明:
+FileName:csv文件或txt文件路径，可用相对路径
+
+File Encoding: 文件编码格式设置
+
+Varible Names: 定义文本文件中的参数名,可设置多个参数，参数之间逗号分隔.定义后可在脚本中引用，引用方式${name}，若存在多个参数，使用,隔开（默认）
+
+Delimiter（use "\t" for tab）:指定参数分隔符号
+
+Allow Quoated data: 是否允许引用数据
+
+Recycle on EOF: 是否循环取值
+
+Stop Thread on EOF: 当Recycle on EOF为false并且Stop Thread on EOF为true,则读完csv文件中的记录后,停止运行
+
+Sharing Mode: 设置是否线程共享
+
+HTTP Cookie管理器：
+这个不太懂！！！！！！！！！！！！！！！
+
+HTTP信息头管理器
+预计是所需要的公有的报文
+
+</code></pre>
