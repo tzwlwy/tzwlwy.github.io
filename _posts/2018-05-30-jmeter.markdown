@@ -21,7 +21,7 @@ sql的话一般适用于一个sql就可以查询到你需要的数据，并且�
 一、正则表达提取器配合debug sampler 使用，可以获取你想要的数据，
 二、通过事物控制器，把多个接口放在该控制器下，可以整合多个接口作为一个事物，获取多个接口总共的响应时间及吞吐率等
 三、JMeter监控内存及CPU ——plugin插件监控被测系统资源方法，这个需要下载几个插件，详情可以访问 
-    [JMeter监控内存及CPU ——plugin插件监控被测系统资源方法](https://www.cnblogs.com/lsjdddddd/p/5709052.html),   
+    ![JMeter监控内存及CPU ——plugin插件监控被测系统资源方法](https://www.cnblogs.com/lsjdddddd/p/5709052.html),   
     但是这个需要jmeter版本不能过高，目前3.3的版本是不可以的，据说3.1的版本是支持的，暂时未做实验
 
 </code></pre>
