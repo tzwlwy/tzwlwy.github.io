@@ -25,7 +25,7 @@ set global validate_password_policy=0; 改变密码复杂度设置
 set global validate_password_length=1; 改变密码长度设置
 ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';  这个时候就可以了
 exit 退出mysql
-yum -y remove mysql57-community-release-el7-10.noarch 卸载Yum Repository，防止它自动更新
+yum -y remove mysql57-community-release-el7-10.noarch 卸载Yum Repository，防止它自动更新 
 </code></pre>
 
 
