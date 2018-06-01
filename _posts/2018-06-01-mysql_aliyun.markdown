@@ -8,8 +8,7 @@ tags: [mysql]
 一直想玩玩linux，刚好又想深入学习一下mysql，然后就合二为一了
 
 **安装mysql**
-参考地址：https://www.cnblogs.com/bigbrotherer/p/7241845.html
-
+参考地址：[https://www.cnblogs.com/bigbrotherer/p/7241845.html](https://www.cnblogs.com/bigbrotherer/p/7241845.html)
 <pre><code>
 安装用的Yum Repository
 wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm 
@@ -30,7 +29,7 @@ yum -y remove mysql57-community-release-el7-10.noarch 卸载Yum Repository，防
 
 
 **设置 访问权限**
-详情访问http://www.jb51.net/article/121173.htm
+详情访问 [http://www.jb51.net/article/121173.html](http://www.jb51.net/article/121173.html)
 <pre><code>
 mysql -u root -h localhost -p 登录mysql
 update user set host='%' where user='root' and host='localhost'; 所有ip都可访问，设置私密性请看详情
