@@ -1,0 +1,174 @@
+---
+layout: post
+category: "other"
+title:  "mysql学习"
+tags: [mysql]
+---
+
+
+
+**mysql 建表实例**
+<pre><code>
+CREATE TABLE `award` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+   `aty_id` varchar(100) NOT NULL DEFAULT '' COMMENT '活动场景id',
+   `nickname` varchar(12) NOT NULL DEFAULT '' COMMENT '用户昵称',
+   `is_awarded` tinyint(1) NOT NULL DEFAULT 0 COMMENT '用户是否领奖',
+   `award_time` int(11) NOT NULL DEFAULT 0 COMMENT '领奖时间',
+   `account` varchar(12) NOT NULL DEFAULT '' COMMENT '帐号',
+   `password` char(32) NOT NULL DEFAULT '' COMMENT '密码',
+   `message` varchar(255) NOT NULL DEFAULT '' COMMENT '获奖信息',
+   `created_time` int(11) NOT NULL DEFAULT 0 COMMENT '创建时间',
+   `updated_time` int(11) NOT NULL DEFAULT 0 COMMENT '更新时间',
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='获奖信息表';
+</code></pre>
+
+
+**join**
+<pre><code>
+SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a INNER JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+inner join 返回所有 符合条件的两表所有数据，跟哪一个表在前哪一个表在后无关
+SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a LEFT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+left join 返回左表所有查询数据，右表无数据则用null 代替 ,左表为left join 左边的表，若左表中的数据在右表中有多条数据，则返回多条，例如
+左表a=2的有2条，右表关联a=2 的有三条，则返回2*3 =6条数据
+SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a RIGHT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+right join 与left join 刚好相反，右表为right join 右边的表
+</code></pre>
+
+
+**alter**
+<pre><code>
+ ALTER TABLE testalter_tbl  DROP i;
+删除字段i
+ ALTER TABLE testalter_tbl ADD i INT;
+增加字段i
+ALTER TABLE testalter_tbl ADD y INT FIRST;
+增加字段y在最前面
+ALTER TABLE testalter_tbl ADD z INT AFTER y;
+增加z字段在y字段后面
+ALTER TABLE testalter_tbl MODIFY z CHAR(10);
+修改字段z的类型
+ALTER TABLE testalter_tbl CHANGE i yan BIGINT;
+修改i字段名字及类型
+ALTER TABLE testalter_tbl  MODIFY y BIGINT NOT NULL DEFAULT 100;
+设置y字段不为空，且默认值为100
+ ALTER TABLE testalter_tbl RENAME TO alter_tbl;
+修改表面
+</code></pre>
+
+**索引**
+<pre><code>
+如果是CHAR,VARCHAR,类型,length可以小于字段的实际长度,如果是BLOB和TEXT类型就必须指定长度,
+方式1：
+CREATE INDEX account_Index ON `award`(`account`); 其中account_Index 为自己为索引气的名字，award为表名，account为需要增加索引的字段名
+CREATE INDEX nickname_Index ON `award`(`nickname`(10))
+方式2：
+ALTER TABLE award ADD INDEX account_Index(`account`)；其中award为表名，account_Index 为自己为索引气的名字，account为需要增加索引的字段名
+
+唯一性索引：与普通索引创建时相比多了UNIQUE，唯一索引是为了去重，数据库不允许该字段多条相同重复的值
+CREATE UNIQUE INDEX IndexName ON `TableName`(`字段名`(length)); 
+ALTER TABLE TableName ADD UNIQUE (column_list)  
+主索引：与普通索引的区别类似主键与普通字段
+CREATE PRIMARY INDEX IndexName ON `TableName`(`字段名`(length)); 
+ALTER TABLE TableName ADD PRIMARY (column_list)  
+组合索引：相比于单索引，符合某些条件时速度快很多
+CREATE INDEX nickname_account_createdTime_Index ON `award`(`nickname`, `account`, `created_time`);
+这个组合索引相当于建立了以下几个索引
+nickname,account,created_time
+nickname,account
+nickname
+下面的几个 SQL 会用到：
+SELECT * FROM award WHREE nickname="erquan" AND account="郑州"
+SELECT * FROM award WHREE nickname="erquan"
+而下面几个则不会用到：
+SELECT * FROM award WHREE account=20 AND nickname="郑州"
+SELECT * FROM award WHREE account="郑州"
+展示索引：
+show index from WMS.award  ;wms 是库，award是表
+删除索引：
+DORP INDEX IndexName ON `TableName`；IndexName索引名，TableName表名	
+</code></pre>
+
+**临时表**
+<pre><code>
+创建临时表：多了一个TEMPORARY字段，不会真正建表，断开连接后删除
+CREATE TEMPORARY TABLE SalesSummary (
+	product_name VARCHAR (50) NOT NULL,
+	total_sales DECIMAL (12, 2) NOT NULL DEFAULT 0.00,
+	avg_unit_price DECIMAL (7, 2) NOT NULL DEFAULT 0.00,
+	total_units_sold INT UNSIGNED NOT NULL DEFAULT 0
+);
+临时表的应用场景：
+对于一个电子商务类网站，不同消费者在网站上购物，就是一个独立的 SESSION，选购商品放进购物车中，
+最后将购物车中的商品进行结算。也就是说，必须在整个SESSION期间保存购物车中的信息。同时，还存在有些消费者，
+往往最终结账时放弃购买商品。如果，直接将消费者选购信息存放在最终表（PERMANENT）中，必然对最终表造成非常大的压力。
+因此，对于这种案例，就可以采用创建临时表(ON COMMIT PRESERVE ROWS)的方法来解决。数据只在 SESSION 期间有效，
+对于结算成功的有效数据，转移到最终表中后，ORACLE自动TRUNCATE 临时数据；
+对于放弃结算的数据，ORACLE 同样自动进行 TRUNCATE ，而无须编码控制，并且最终表只处理有效订单，减轻了频繁的DML操作的压力。
+1：当处理某一批临时数据，需要多次DML操作时（插入、更新等），建议使用临时表。
+2：当某些表在查询里面，需要多次用来做连接时。（为了获取目标数据需要关联A、B、C， 同时为了获取另外一个目标数据，需要关联D、B、C....）
+
+</code></pre>
+
+
+
+
+**复制表数据**
+<pre><code>
+CREATE TABLE 新表SELECT * FROM 旧表
+复制表结构：
+CREATE TABLE test4 SELECT * FROM runoob_tbl where 1=2; 写1=2则不拷贝任何数据
+复制旧表数据至新表（两个表结构一样），一般结合复制表结构使用（完全拷贝）
+INSERT INTO 新表SELECT * FROM 旧表
+复制旧表的数据到新表(假设两个表结构不一样)
+INSERT INTO 新表(字段1,字段2,.......) SELECT 字段1,字段2,...... FROM 旧表
+</code></pre>
+
+
+
+
+
+**序列**
+<pre><code>
+创建sql序列，使用 MySQL AUTO_INCREMENT 来定义列，实现自增
+CREATE TABLE insect (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (id),
+	NAME VARCHAR (30) NOT NULL,
+	# type of insect
+	date DATE NOT NULL,
+	# date collected
+	origin VARCHAR (30) NOT NULL # where collected
+);
+</code></pre>
+
+**MySQL 处理重复数据**
+<pre><code>
+之前索引处讲到了可以通过主索引来避免重复数据，这里我们也可以通过设置双主键来设置
+CREATE TABLE person_tbl
+(
+   first_name CHAR(20) NOT NULL,
+   last_name CHAR(20) NOT NULL,
+   sex CHAR(10),
+   PRIMARY KEY (last_name, first_name)
+);
+insert IGNORE：使用这个语句，当数据重复时会跳过该数据插入，不用使用try catch 了
+
+INSERT IGNORE INTO person_tbl (last_name, first_name)
+VALUES
+('Jay', 'Thomas')
+
+</code></pre>
+
+**sql注入**
+<pre><code>
+实例一；当用户输入username，数据库执行sql select * from user where username={username}
+这样的话当用户输入Qadir'; DELETE FROM users;";  那么sql就变为select * from user where username=‘Qadir'; DELETE FROM users;";"
+这样就会删除数据库
+</code></pre>
+
+**数据库导入导出功能（未完待续）**
+<pre><code>
+mysqldump -uroot -p WMS > WMS.sql
+</code></pre>

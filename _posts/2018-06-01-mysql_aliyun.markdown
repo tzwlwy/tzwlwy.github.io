@@ -34,3 +34,8 @@ yum -y remove mysql57-community-release-el7-10.noarch 卸载Yum Repository，防
 mysql -u root -h localhost -p 登录mysql
 update user set host='%' where user='root' and host='localhost'; 所有ip都可访问，设置私密性请看详情
 </code></pre>
+
+**mysql linux部分指令**
+<pre><code>
+service mysqld restart 重启sql服务
+</code></pre>
