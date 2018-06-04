@@ -5,7 +5,26 @@ title:  "mysql学习"
 tags: [mysql]
 ---
 
+**创建数据库，表，insert**
+<pre><code>
+create DATABASE RUNOOB;创建数据库
+drop database RUNOOB; 删除数据库
+use RUNOOB;选择MySQL数据库
+CREATE TABLE IF NOT EXISTS `runoob_tbl`(
+   `runoob_id` INT UNSIGNED AUTO_INCREMENT,
+   `runoob_title` VARCHAR(100) NOT NULL,
+   `runoob_author` VARCHAR(40) NOT NULL,
+   `submission_date` DATE,
+   PRIMARY KEY ( `runoob_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;  建表
+DROP TABLE runoob_tbl 删表
 
+INSERT INTO runoob_tbl
+(runoob_title, runoob_author, submission_date)
+VALUES
+("学习 MySQL", "菜鸟教程", NOW()); 
+
+</code></pre>
 
 **mysql 建表实例**
 <pre><code>
