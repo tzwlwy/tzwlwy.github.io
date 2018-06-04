@@ -191,3 +191,9 @@ VALUES
 <pre><code>
 mysqldump -uroot -p WMS > WMS.sql
 </code></pre>
+
+
+**mysql 字段类型**
+![img](/img/in-post/sql/mysqldate1.png)
+![img](/img/in-post/sql/mysqldate2.png)
+![img](/img/in-post/sql/mysqldate3.png)
