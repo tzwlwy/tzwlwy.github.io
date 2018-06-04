@@ -196,6 +196,6 @@ mysqldump -uroot -p WMS > WMS.sql
 **mysql 字段类型**
 
 
-![img](\img\in-post\sql\mysqldata1.png)  
+![img](\img\in-post\sql\mysqldate1.png)  
 ![img](\img\in-post\sql\mysqldata2.png)
 ![img](\img\in-post\sql\mysqldata3.png)
