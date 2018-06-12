@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<base href="http://www.runoob.com/images/" target="_blank">
+<style type="text/css">
+body {background-color:write}
+p {color:black}
+</style>
+
+<link rel="stylesheet" type="text/css" href="styles.css"> 
+
+
+<script>
+document.write("Hello World!")
+</script>
+<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+<!-- 类似定义数据的路径，全局变量-->
+<title>html学习笔记</title>
+
+<!-- meta 应该类似描述，表达网页的一些信息 -->
+</head>
+<body>
+<p>这是一个段落。</p>
+<hr>
+<!-- 这是一个注释 -->
+<p>这是一个段落。</p>
+<hr>
+<p>这是一个段落。</p>
+<hr>
+
+<form action="">
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname">
+</form>
+<form>
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female
+</form>
+
+<form name="input" action="html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form>
+<!-- 这个还不是很了解 -->
+
+<p>这是一个复选框。</p>
+<form>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car 
+</form>
+
+<p>这是一个下拉框。</p>
+<form action="">
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+
+<p>这是一个预选下拉框。</p>
+<form action="">
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected>Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+
+
+<textarea rows="10" cols="30">
+我是一个文本框。
+</textarea>
+
+<p>这是一个按钮。</p>
+<form action="">
+<input type="button" value="Hello world!">
+</form>
+
+<!-- 这是一个炫酷的界面-->
+<form action="">
+<fieldset>
+<legend>Personal information:</legend>
+Name: <input type="text" size="30"><br>
+E-mail: <input type="text" size="30"><br>
+Date of birth: <input type="text" size="10">
+</fieldset>
+</form>
+
+
+<form action="demo-form.php">
+First name: <input type="text" name="FirstName" value="Mickey"><br>
+Last name: <input type="text" name="LastName" value="Mouse"><br>
+<input type="submit" value="提交">
+</form>
+
+<form action="demo-form.php" method="get">
+  <input type="checkbox" name="vehicle[]" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle[]" value="Car" checked="checked"> I have a car<br>
+  <input type="submit" value="提交">
+</form>
+
+
+<form action="demo-form.php" method="get">
+  <input type="radio" name="sex" value="Male"> Male<br>
+  <input type="radio" name="sex" value="Female" checked="checked"> Female<br>
+  <input type="submit" value="提交">
+</form>
+
+<h2 style="background-color:red;">这是一个标题</h2>
+<p style="background-color:green;">这是一个段落。</p>
+<h1 style="font-family:verdana;">一个标题</h1>
+<p style="font-family:arial;color:red;font-size:20px;text-align:center;">一个段落。</p>
+
+<br>
+
+<h1 style="text-align:center;">居中对齐的标题</h1>
+
+<div style="color:#0000FF">
+  <h3>这是一个在 div 元素中的标题。</h3>
+  <p>这是一个在 div 元素中的文本。</p>
+</div>
+
+<p>我的母亲有 <span style="color:blue;font-weight:bold">蓝色</span> 的眼睛，我得父亲有 <span style="color:darkolivegreen;font-weight:bold">碧绿色</span> 的眼睛。</p>
+
+<div id="container" style="width:900px">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+
+<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+<b>菜单</b><br>
+HTML<br>
+CSS<br>
+JavaScript</div>
+
+<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+内容在这里</div>
+	<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+内容在这里</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+版权 © runoob.com</div>
+
+</div>
+
+<h4>无序列表:</h4>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<h4>有序列表:</h4>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<!--<br>表示换行 -->
+<img src="E:/test/a.jpg" width="560" height="200" />
+<br>
+
+<p>创建图片链接:
+<a href="https://www.baidu.com/">
+<img  border="10" src="E:/test/a.jpg" alt="如果无法显示图像，浏览器将显示这里的文本" width="32" height="32"></a></p>
+<!--border 表示边框宽度 -->
+
+<p>
+这是另一个电子邮件链接：
+<a href="mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">发送邮件!</a>
+</p>
+
+
+
+The<abbr title="World Health Organization"> WHO</abbr> was founded in 1948.
+<!--上面这一句移到WHO上面会出现完整的话语，也就是title里面的话 -->
+Can I get this <acronym title="as soon as possible">ASAP</acronym>?
+<!--同上一句，但是html5不支持 -->
+
+<br>
+
+<a href="https://www.baidu.com/"  target="quot" >这是一个链接使用了href 属性</a>
+<p>如果你将 target 属性设置为 &quot;_blank&quot;, 链接将在新窗口打开。</p>
+<p>不加target 属性 ，本窗口打开</p>
+<br>
+
+<a id="tips">有用的提示部分</a>
+
+<a href="#tips">访问有用的提示部分</a>
+
+<br>
+
+<!-- 这是一个注释 -->
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+<!-- 上面这边会定义图像点击事件，不同的地方点击跳转地方不同 -->
+<!--详情见 http://www.runoob.com/try/try.php?filename=tryhtml_areamap -->
+<br>
+<article>
+  <h1>Internet Explorer 9</h1>
+  <!-- 定义几号字体 -->
+  <p> Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
+</article>
+
+
+<p>WWF's goal is to: 
+<q>Build a future where people live in harmony with nature.</q>
+We hope they succeed.</p>
+  <!-- 细看可以看出实际效果会多出"" -->
+  
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+<p>这是一个普通的文本- <b>这是一个加粗文本</b>。</p>
+
+<p>这个<br>段落<br>演示了分行的效果</p>
+
+<b>这个文本是加粗的</b>
+
+<br />
+
+<strong>这个文本是加粗的</strong>
+
+<br />
+
+<big>这个文本字体放大</big>
+
+<br />
+
+<em>这个文本是斜体的</em>
+
+<br />
+
+<i>这个文本是斜体的</i>
+
+<br />
+
+<small>这个文本是缩小的</small>
+
+<br />
+
+这个文本包含
+<sub>下标</sub>
+
+<br />
+
+这个文本包含
+<sup>上标</sup>
+
+<p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>  
+
+<pre>
+此例演示如何使用 pre 标签
+对空行和    空格
+进行控制
+</pre>
+  <!-- 这个 pre 标签很有作用 -->
+  
+  <p>这是表格</p>
+  <table border="1">
+  <caption>表格标题</caption>
+    <!-- 表格标题 -->
+    <tr> 
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+
+<h4>垂直标题:</h4>
+<table border="1">
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th>Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <th>Telephone:</th>
+  <td>555 77 855</td>
+</tr>
+</table>
+  <!-- 观察th 和td 标签可以区别垂直和水平标题的区别 -->
+<h4>单元格跨两格:</h4>
+<table border="1">
+<tr>
+  <th>Name</th>
+  <th colspan="2" style="background-color:#FFA500;">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>单元格跨两列:</h4>
+<table border="1"
+cellpadding="100">
+>
+  <!--cellpadding表格大小 -->
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<hr>
+
+<table border="1">
+<tr>
+  <td>
+   <p>这是一个段落</p>
+   <p>这是另一个段落</p>
+  </td>
+  <td>这个单元格包含一个表格:
+   <table border="1">
+   <tr>
+     <td>A</td>
+     <td>B</td>
+   </tr>
+   <tr>
+     <td>C</td>
+     <td>D</td>
+   </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+  <td>这个单元格包含一个列表
+   <ul>
+    <li>apples</li>
+    <li>bananas</li>
+    <li>pineapples</li>
+   </ul>
+  </td>
+  <td>HELLO</td>
+</tr>
+</table>
+
+<p style="background-color:rgb(255,255,0)">
+通过 rbg 值设置背景颜色
+</p>
+<p style="background-color:rgba(255,255,0,0.25)">
+通过 rbg 值设置背景颜色
+</p>
+<p style="background-color:rgba(255,255,0,0.5)">
+通过 rbg 值设置背景颜色
+</p>
+<p style="background-color:rgba(255,255,0,0.75)">
+通过 rbg 值设置背景颜色
+</p>
+
+<iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+
+
+<iframe src="demo_iframe.htm" frameborder="0"></iframe>
+<!-- Iframe - 移除边框 -->
+
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.baidu.com/" target="iframe_a">点击跳转百度界面，在第三个iframe框</a></p>
+使用iframe来显示目标链接页面
+
+<p>一些旧的浏览器不支持 iframe。</p>
+<p>如果浏览器不支持 iframes 则不会显示。</p>
+
+
+</body>
+
+<address>
+Written by  wangyan
+</address>
+</html>
