@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "other"
-title:  "使用hash值对比文件"
+title:  "使用websocket实时获取后台日志"
 tags: [python]
 ---
 
