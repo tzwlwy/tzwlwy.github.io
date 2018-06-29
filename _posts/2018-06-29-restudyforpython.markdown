@@ -15,4 +15,26 @@ y = x = x + 3  #赋值 ，常规理解y = (x = x + 3 ) ，这么写在python中�
 
 ```
 
+下划线
+```python
+class Student:
+    def __init__(self, name, age):
+        self._name = name
+        self.age=age
 
+stu=Student('Alvin','30')
+#当要输入_name时，pycharm不会进行_name的提示
+print(stu._name)
+#当要显示age时，pycharm会进行age的提示
+print(stu.age)
+
+#下划线__
+
+class Person:
+    def __init__(self, name):
+        self.__name=name
+
+per=Person('Young')
+# print(per.__name)  __表示私有的，只能通过下面这种形式访问
+print(per._Person__name)
+```
