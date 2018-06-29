@@ -39,6 +39,15 @@ per=Person('Young')
 print(per._Person__name)
 ```
 
+isinstance用法
+```python
+num='5'
+if isinstance(num, (int,str, float, complex)):
+    print('right')
+else:
+    print('fuck')
+```
+
 
 随笔小程序1
 ```python
