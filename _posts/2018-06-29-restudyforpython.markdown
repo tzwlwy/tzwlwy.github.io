@@ -6,7 +6,7 @@ tags: [python]
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**
-今天看到了第 页，共925页。
+今天看到了第 87页，共925页。
 ```python
 range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
@@ -37,4 +37,36 @@ class Person:
 per=Person('Young')
 # print(per.__name)  __表示私有的，只能通过下面这种形式访问
 print(per._Person__name)
+```
+
+
+随笔小程序1
+```python
+import os
+ls = os.linesep  #  linesep = '\r\n'
+print(ls)
+# get filename
+while True:
+ fname = input('Enter filename: ')
+ if os.path.exists(fname):
+    print ("ERROR: '%s' already exists" % fname)
+
+ else:
+    break
+
+ # get file content (text) lines
+all = []
+print ("\nEnter lines ('.' by itself to quit).\n")
+ # loop until user terminates input
+while True:
+ entry = input('> ')
+ if entry == '.':
+   break
+ else:
+   all.append(entry)
+ # write lines to file with proper line-ending
+fobj = open(fname, 'w')
+fobj.writelines(['%s%s' % (x, ls) for x in all])
+fobj.close()
+print ('finish!')
 ```
