@@ -6,7 +6,7 @@ tags: [python]
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**
-今天看到了第 87页，共925页。
+今天看到了第 141页，共925页。
 ```python
 range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
@@ -46,6 +46,15 @@ if isinstance(num, (int,str, float, complex)):
     print('right')
 else:
     print('fuck')
+```
+
+
+== 和 is 的区别
+
+```python
+你认为type(a) == type(b)和type(a) is type(b)之间的不同是什么？为什么会选者后者？函数isinstance()与这有什么关系？
+“==”比较的是值，is比较的是对象。因为每个对象只可能有一种类型的值，所以可以直接比较他们的ID，而不用先计算值再做比较
+函数isinstance()用来确定这个对象是否属于这个类型，或者实例是否属于某个类。
 ```
 
 
