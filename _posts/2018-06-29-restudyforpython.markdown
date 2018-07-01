@@ -12,7 +12,9 @@ range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
 x, y, z = 1, 2, 'a string' #一次性声明变量
 y = x = x + 3  #赋值 ，常规理解y = (x = x + 3 ) ，这么写在python中是错误的
-
+sqdEvens = [x ** 2 for x in range(8) if not x % 2]
+object.attribute
+#print 语句中使用逗号来抑制自动生成的换行符号
 ```
 
 下划线
