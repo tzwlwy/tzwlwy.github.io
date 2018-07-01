@@ -1,0 +1,44 @@
+Index: _posts/2018-06-29-restudyforpython.markdown
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- _posts/2018-06-29-restudyforpython.markdown	(revision 530c56349e939bcc214b66bc26d4b3b006e03fb8)
++++ _posts/2018-06-29-restudyforpython.markdown	(date 1530416197853)
+@@ -12,7 +12,9 @@
+ b=input('请输入字符:')   #input
+ x, y, z = 1, 2, 'a string' #一次性声明变量
+ y = x = x + 3  #赋值 ，常规理解y = (x = x + 3 ) ，这么写在python中是错误的
+-
++sqdEvens = [x ** 2 for x in range(8) if not x % 2]
++object.attribute
++#print 语句中使用逗号来抑制自动生成的换行符号
+ ```
+ 
+ 下划线
+Index: 增加mysql学习笔记.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+--- 增加mysql学习笔记.patch	(date 1530416213963)
++++ 增加mysql学习笔记.patch	(date 1530416213963)
+@@ -0,0 +1,18 @@
++Index: _posts/2018-06-29-restudyforpython.markdown
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- _posts/2018-06-29-restudyforpython.markdown	(revision 530c56349e939bcc214b66bc26d4b3b006e03fb8)
+++++ _posts/2018-06-29-restudyforpython.markdown	(date 1530416197853)
++@@ -12,7 +12,9 @@
++ b=input('请输入字符:')   #input
++ x, y, z = 1, 2, 'a string' #一次性声明变量
++ y = x = x + 3  #赋值 ，常规理解y = (x = x + 3 ) ，这么写在python中是错误的
++-
+++sqdEvens = [x ** 2 for x in range(8) if not x % 2]
+++object.attribute
+++#print 语句中使用逗号来抑制自动生成的换行符号
++ ```
++ 
++ 下划线
