@@ -6,15 +6,30 @@ tags: [python]
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**
-今天看到了第 141页，共925页。
+今天看到了第 250页，共925页。 感覺有點靜不下心來看
 ```python
 range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
 x, y, z = 1, 2, 'a string' #一次性声明变量
 y = x = x + 3  #赋值 ，常规理解y = (x = x + 3 ) ，这么写在python中是错误的
 sqdEvens = [x ** 2 for x in range(8) if not x % 2]
+s = 'abcde'
+a=[s[:int(len(s)-y)] for y in range(0, len(s))]
 object.attribute
+'%s %s' % ('Spanish', 'Inquisition')
+s = ' '.join(('Spanish', 'Inquisition', 'Made Easy'))
 #print 语句中使用逗号来抑制自动生成的换行符号
+
+```
+albums
+```python
+albums = ['tales', 'robot', 'pyramid']
+for i, album in enumerate(albums):
+  print(i, album)
+  
+0 tales
+1 robot
+2 pyramid
 ```
 
 下划线
