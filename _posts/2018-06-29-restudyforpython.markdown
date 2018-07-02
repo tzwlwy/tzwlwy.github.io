@@ -6,7 +6,7 @@ tags: [python]
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**
-今天看到了第 318页，共925页。 感覺有點靜不下心來看
+今天看到了第 337页，共925页。 感覺有點靜不下心來看
 ```python
 range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
@@ -29,6 +29,19 @@ dict2.update(dict3)   #类似新增，但是在dict中相同key只保留dict2的
 print(dict2.get('host'))   #venus
 dict2.setdefault('host1','venus1') #设置默认dict健值，若存在则失效
 smaller = (x < y and [x] or [y])[0]  #等价于 smaller = x if x < y else y
+```
+```python
+w 以写方式打开 (必要时清空)
+a 以追加模式打开 (从 EOF 开始, 必要时创建新文件)
+r+ 以读写模式打开
+w+ 以读写模式打开 (参见 w )
+a+ 以读写模式打开 (参见 a )
+rb 以二进制读模式打开
+wb 以二进制写模式打开 (参见 w )
+ab 以二进制追加模式打开 (参见 a )
+rb+ 以二进制读写模式打开 (参见 r+ )
+wb+ 以二进制读写模式打开 (参见 w+ )
+ab+ 以二进制读写模式打开 (参见 a+ )
 ```
 
 
@@ -111,6 +124,15 @@ per=Person('Young')
 print(per._Person__name)
 ```
 
+os 模块属性 描述
+```python
+linesep 用于在文件中分隔行的字符串
+sep 用来分隔文件路径名的字符串
+pathsep 用于分隔文件路径的字符串
+curdir 当前工作目录的字符串名称
+pardir (当前工作目录的)父目录字符串名称
+```
+
 isinstance用法
 ```python
 num='5'
@@ -133,7 +155,7 @@ else:
 随笔小程序1
 ```python
 import os
-ls = os.linesep  #  linesep = '\r\n'
+ls = os.linesep  #  linesep = '\r\n'  使用这个可以解决跨系统的问题，因为linux换行符不是 \r\n
 print(ls)
 # get filename
 while True:
