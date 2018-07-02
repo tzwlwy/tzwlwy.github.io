@@ -19,8 +19,63 @@ object.attribute
 '%s %s' % ('Spanish', 'Inquisition')
 s = ' '.join(('Spanish', 'Inquisition', 'Made Easy'))
 #print 语句中使用逗号来抑制自动生成的换行符号
+dict2.pop('name') # 删除并返回键为“name”的条目
+
+dict2= {'host':'earth', 'port':80}
+dict3= {'host':'venus', 'server':'http'}
+dict2.update(dict3)   #类似新增，但是在dict中相同key只保留dict2的
+>>> dict2
+{'server': 'http', 'port': 80, 'host': 'venus'}
+print(dict2.get('host'))   #venus
+dict2.setdefault('host1','venus1') #设置默认dict健值，若存在则失效
+smaller = (x < y and [x] or [y])[0]  #等价于 smaller = x if x < y else y
+```
+
+
+迭代器
+```python
+myTuple = (123, 'xyz', 45.67)
+i = iter(myTuple)
+print(next(i))
+print(next(i))
+print(next(i))
+# 123
+# xyz
+# 45.67
+
+#这里的cols也可以用list代替
+rows = [1, 2, 3, 17]
+def cols(): # example of simple generator
+   yield 56
+   yield 2
+   yield 1
+x_product_pairs = ((i, j) for i in rows for j in cols())
+print(x_product_pairs)
+for pair in x_product_pairs:
+   print (pair)
+
+
+#文件本身就是一个迭代器，之前需要读取所有行  （改造前）
+f = open(r'D:\testing\program\interface\test.txt', 'r')
+longest = 0
+allLines = f.readlines()
+f.close()
+for line in allLines:
+    linelen = len(line.strip())
+    a=line.strip()
+    if linelen > longest:
+       longest = linelen
+       print(longest)
+       print(a)
+
+#改造后
+f = open(r'D:\testing\program\interface\test.txt', 'r')
+allLineLens = [len(x.strip()) for x in f]
+f.close()
+print(allLineLens)
 
 ```
+
 albums
 ```python
 albums = ['tales', 'robot', 'pyramid']
