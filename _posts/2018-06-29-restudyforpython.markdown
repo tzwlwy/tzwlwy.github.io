@@ -6,7 +6,7 @@ tags: [python]
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**
-今天看到了第 250页，共925页。 感覺有點靜不下心來看
+今天看到了第 318页，共925页。 感覺有點靜不下心來看
 ```python
 range([[start,]stop[,step])  #range的使用方法
 b=input('请输入字符:')   #input
