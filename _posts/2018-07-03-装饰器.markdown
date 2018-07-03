@@ -7,12 +7,10 @@ tags: [python]
 
 **装饰器**
 
-```
+```python
 @deco1(deco_arg)
 @deco2
 def func(): pass
 This is equivalent to:这等价于：
 func = deco1(deco_arg)(deco2(func))
 ```
-
-```python
