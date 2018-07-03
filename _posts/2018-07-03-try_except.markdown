@@ -6,6 +6,18 @@ tags: [python]
 ---
 
 **最近在重温基础知识，看到try except 模块**
+
+```python
+try:
+    print(1/0)
+except Exception as e:
+    print(e)
+else: #
+    print('未出现异常时输出这句话')
+finally:
+    print('无论是否异常都输出这句话')
+```
+
 ```python
 def timer(func):
     import time
