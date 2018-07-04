@@ -1,29 +1,112 @@
+# Site settings
+title: Tesla's Blog
+SEOTitle: 王焱的博客 | tzwlwy's Blog
+header-img: img/home-bg.jpg
+email: tesla9527@gmail.com
+description: "There's a bug..."
+keyword: ""
+url: "http://tesla9527.github.io/"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+
+# SNS settings
+RSS: false
+weibo_username:     Tesla9527
+facebook_username:  tesla.lau.9
+github_username:    Tesla9527
+zhihu_username:    tesla-lau
+
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
-highlighter: pygments
-permalink: /posts/:title.html
-excerpt_separator: "<!-- more -->"
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-github: tzwlwy
-author: "tzwlwy"
-email: 13758216976@163.com
-name: "tzwlwy's blog"
-url: https://tzwlwy.github.io/
-all_categories: [
-["python", "python","/posts/python.html"],
-["jmeter", "jmeter","/posts/jmeter.html"],
-["flask", "flask","/posts/flask.html"],
-["linux", "Linux","/posts/linux.html"],
-["performance", "自动化","/posts/performance.html"],
-["other", "随笔","/posts/other.html"],
+
+
+# Disqus settings
+#disqus_username: teslalau
+
+# Duoshuo settings
+#duoshuo_username: teslalau
+# Share component is depend on Comment so we can NOT use share only.
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+#ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+ga_track_id: 'UA-79173420-1'            # Format: UA-xxxxxx-xx
+ga_domain: http://tesla9527.github.io/
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "软件测试工程师，电子琴爱好者"
+sidebar-avatar: /img/avatar-Tesla.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+      title: "当然我在扯淡",
+        href: "http://www.yinwang.org/"
+    },
+    {
+      title: "张啸的博客",
+        href: "http://xiaoleon.cn/about/"
+    },
+    {
+      title: "王焱的博客",
+        href: "https://tzwlwy.github.io/"
+    },
+    {
+      title: "leetcode",
+        href: "https://leetcode.com/"
+    },
+    {
+      title: "python3-cookbook",
+        href: "http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html"
+    },
+    {
+      title: "500 Lines or Less",
+        href: "http://www.aosabook.org/en/index.html"
+    },  
+    {
+      title: "pythonprogramming.net",
+        href: "https://www.pythonprogramming.net/"
+    }
 ]
-
-paginate: 1
-paginate_path: "posts/page:num"
-timezone: America/Los_Angeles
-
-collections:
-  docs:
-    output: true
-
-gems:
- - jekyll-paginate
