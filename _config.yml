@@ -2,20 +2,20 @@
 title: Tesla's Blog
 SEOTitle: 王焱的博客 | tzwlwy's Blog
 header-img: img/home-bg.jpg
-email: tesla9527@gmail.com
-description: "There's a bug..."
+email: tzwlwangyan@gmail.com
+description: "There's a girl..."
 keyword: ""
-url: "http://tesla9527.github.io/"              # your host, for absolute URL
+url: "http://tzwlwy.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
 RSS: false
-weibo_username:     Tesla9527
-facebook_username:  tesla.lau.9
-github_username:    Tesla9527
-zhihu_username:    tesla-lau
+weibo_username:     tzwlwy
+facebook_username:  null
+github_username:    tzwlwy
+zhihu_username:     tzwlwy
 
 
 
