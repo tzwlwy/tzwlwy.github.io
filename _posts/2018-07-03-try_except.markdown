@@ -2,7 +2,7 @@
 layout: post
 category: "python"
 title:  "try except 对性能的影响"
-header-img: "img/in-post/post-bg-unix-linux.jpg"
+header-img: "img/in-post/fruit.jpg"
 tags:
     - Python
 ---
