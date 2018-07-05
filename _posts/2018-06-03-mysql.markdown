@@ -2,7 +2,9 @@
 layout: post
 category: "other"
 title:  "mysql学习"
-tags: [mysql]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Msql
 ---
 
 **创建数据库，表，insert**

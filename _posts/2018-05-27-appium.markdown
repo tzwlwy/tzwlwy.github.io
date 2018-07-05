@@ -2,7 +2,11 @@
 layout: post
 category: "performance"
 title:  "appium随笔总结"
-tags: [appium]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
+    - Appium
+    - Android
 ---
 
 

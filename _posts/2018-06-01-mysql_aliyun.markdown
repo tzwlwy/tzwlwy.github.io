@@ -2,7 +2,10 @@
 layout: post
 category: "other"
 title:  "阿里云安装mysql"
-tags: [mysql]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Msql
+    - 阿里云
 ---
 
 一直想玩玩linux，刚好又想深入学习一下mysql，然后就合二为一了

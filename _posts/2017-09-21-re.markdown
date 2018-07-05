@@ -3,7 +3,7 @@ layout: post
 title:  "正则总结"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
-    - python
+    - Python
 ---
 
 

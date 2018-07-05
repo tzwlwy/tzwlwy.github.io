@@ -2,8 +2,9 @@
 layout: post
 category: "python"
 title:  "一些共用方法"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
-    - python
+    - Python
 ---
 
 

@@ -2,9 +2,10 @@
 layout: post
 category: "python"
 title:  "try except 对性能的影响"
-tags: [python]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
 ---
-
 **最近在重温基础知识，看到try except 模块**
 
 ```python

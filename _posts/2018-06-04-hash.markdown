@@ -2,7 +2,9 @@
 layout: post
 category: "other"
 title:  "使用hash值对比文件"
-tags: [python]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
 ---
 
 **今天需要我测试一个升级服务，不仅需要测试改变点，

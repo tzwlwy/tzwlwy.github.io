@@ -2,7 +2,10 @@
 layout: post
 category: "python"
 title:  "locust学习"
-tags: [python]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
+    - 性能
 ---
 **安装准备**
 专注python，所以特地来学一下这个基于python的locust性能测试  

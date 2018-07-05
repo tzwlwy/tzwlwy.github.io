@@ -2,7 +2,9 @@
 layout: post
 category: "jmeter"
 title:  "jmeter"
-tags: [jmeter]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Jmeter
 ---
 
 **jmeter的误区**

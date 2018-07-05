@@ -2,7 +2,9 @@
 layout: post
 category: "python"
 title:  "python2核心编程笔记"
-tags: [python]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
 ---
 
 **最近想把基础重新完善并深入学习一下python，再看python2核心编程**

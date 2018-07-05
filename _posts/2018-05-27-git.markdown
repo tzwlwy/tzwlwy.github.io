@@ -2,7 +2,9 @@
 layout: post
 category: "other"
 title:  "git常用命令"
-tags: [git]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Git
 ---
 
 

@@ -2,7 +2,10 @@
 layout: post
 category: "other"
 title:  "pycharm与git关联"
-tags: [git]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Git
+    - Pycharm
 ---
 
 

@@ -2,7 +2,10 @@
 layout: post
 category: "other"
 title:  "二叉树遍历"
-tags: [interview]
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Python
+    - Interview
 ---
 
 
