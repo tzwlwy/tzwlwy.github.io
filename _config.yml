@@ -86,23 +86,7 @@ friends: [
         href: "https://tesla9527.github.io/"
     },
     {
-      title: "张啸的博客",
-        href: "http://xiaoleon.cn/about/"
-    },
-    {
-      title: "leetcode",
-        href: "https://leetcode.com/"
-    },
-    {
       title: "python3-cookbook",
         href: "http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html"
-    },
-    {
-      title: "500 Lines or Less",
-        href: "http://www.aosabook.org/en/index.html"
-    },  
-    {
-      title: "pythonprogramming.net",
-        href: "https://www.pythonprogramming.net/"
     }
 ]
