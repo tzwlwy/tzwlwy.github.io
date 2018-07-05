@@ -2,7 +2,7 @@
 layout: post
 category: "other"
 title:  "使用websocket实时获取后台日志"
-tags: [python]
+tags: [python][vue js]
 ---
 
 **最近在研究前后端交互的东西，希望后台日志实时显示到前台，经了解。可以使用websocket**

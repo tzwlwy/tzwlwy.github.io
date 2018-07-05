@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "python"
 title:  "正则总结"
 tags: [python]
+header-img: "img/post-bg-unix-linux.jpg"
 ---
 
 *对于不熟悉正则的同学来说，需要对比关照正则一些符号才更为直观，暂时未放图片，更多请访问印象笔记
