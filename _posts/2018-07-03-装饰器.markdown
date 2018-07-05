@@ -2,7 +2,7 @@
 layout: post
 category: "python"
 title:  "装饰器"
-header-img: "img/in-post/post-bg-unix-linux.jpg"
+header-img: "img/in-post/header.jpg"
 tags:
     - Python
 ---
