@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "如何安装Ionic环境"
-subtitle:   ""
+subtitle:   "test"
 date:       2016-06-10
 author:     "Tesla9527"
 header-img: "img/post-bg-unix-linux.jpg"
