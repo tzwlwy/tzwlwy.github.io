@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "python"
-title:  "装饰器123"
+title:  "装饰器"
 header-img: "img/in-post/header.jpg"
 tags:
     - Python
