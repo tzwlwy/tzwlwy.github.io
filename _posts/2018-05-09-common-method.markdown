@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 category: "python"
 title:  "一些共用方法"
-tags: [python]
+tags:
+    - python
 ---
 
 
