@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "python"
-title:  "装饰器"
+title:  "装饰器和匿名类"
 header-img: "img/in-post/header.jpg"
 tags:
     - Python
@@ -15,4 +15,13 @@ tags:
 def func(): pass
 This is equivalent to:这等价于：
 func = deco1(deco_arg)(deco2(func))
+```
+
+
+**匿名类**
+
+```python
+a=lambda x, y=4: x + y  #x,y=4 为定义的变量 ，：后面表示匿名类函数的执行情况
+a(3)  #return  7
+
 ```
