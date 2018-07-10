@@ -31,7 +31,7 @@ from random import randint
 def randGen(aList):
    while len(aList) > 0:
           print(len(aList))
-          yield aList.pop(randint(0, len(aList)))
+          yield aList.pop(randint(-1, len(aList)-1))
 
 
 aList=[1,2,3,4,5,5,6,78,8,9,9,9,9]
