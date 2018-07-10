@@ -1,0 +1,55 @@
+---
+layout: post
+category: "python"
+title:  "yield"
+header-img: "img/in-post/header.jpg"
+tags:
+    - Python
+---
+
+**yield**
+其实yield 是针对generator 的一种，通过yield 可以输出以及去除元素，
+类似列表的remove和for 循环结合使用，下面是两个例子
+
+```python
+def simpleGen():
+    yield 1
+    yield '2 --> punch!'
+    yield '3 --> punch!1'
+
+myG = simpleGen()
+print(next(myG))
+print(next(myG))
+print(myG)
+for i in  myG:
+    print(i)
+```
+
+下面这个例子很好的解释了yield的作用，并且yield占用空间内存小
+```python
+from random import randint
+def randGen(aList):
+   while len(aList) > 0:
+          print(len(aList))
+          yield aList.pop(randint(0, len(aList)))
+
+
+aList=[1,2,3,4,5,5,6,78,8,9,9,9,9]
+# randGen(aList) #yield 会把函数变为一个generator，所以直接这样不返回任何数据
+a=randGen(aList)
+print(next(a))
+print(next(a))
+print(next(a))
+print(next(a))
+print(aList)
+
+# 13
+# 3
+# 12
+# 5
+# 11
+# 2
+# 10
+# 9
+# [1, 4, 5, 6, 78, 8, 9, 9, 9]
+```
