@@ -24,6 +24,41 @@ func = deco1(deco_arg)(deco2(func))
 a=lambda x, y=4: x + y  #x,y=4 为定义的变量 ，：后面表示匿名类函数的执行情况
 a(3)  #return  7
 
+x = 10
+def foo():
+    y = 5
+    bar = lambda :x+y
+    print(bar())
+foo()  #15
+
+x = 10
+def foo():
+    y = 5
+    bar = lambda :x+y
+    print(bar)
+foo()  #<function foo.<locals>.<lambda> at 0x021B2198>
+
+
+x = 10
+x = 10
+def foo():
+    y = 5
+    bar = lambda y=y: x+y
+    print (bar())
+    y = 8
+    print(bar()) #这边bar()的值为18，因为lambda 的定义没有变。
+
+
+#这么写就好了
+x = 10
+def foo():
+   y = 5
+   bar = lambda z:x+z
+   print (bar(y))
+   y = 8
+   print(bar(y))
+foo()
+
 ```
 
 ```python
