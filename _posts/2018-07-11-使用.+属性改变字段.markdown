@@ -1,0 +1,45 @@
+---
+layout: post
+category: "python"
+title:  "改变类中的字段（.+字段名）"
+header-img: "img/in-post/header.jpg"
+tags:
+    - 工具
+---
+
+**自己不太使用这种方法，以后可能会有用**
+
+<pre><code>
+#############
+# imptee.py #
+#############
+foo = 'abc'
+def show():
+print 'foo from imptee:', foo
+#############
+# impter.py #
+#############
+from imptee import foo, show
+show()
+foo = 123
+print 'foo from impter:', foo
+show()
+运行这个导入者程序, 我们发现从被导入者的观点看, 它的 foo 变量没有改变, 即使 我们
+在 importer.py 里修改了它。
+foo from imptee: abc
+foo from impter: 123
+foo from imptee: abc
+唯一的解决办法是使用 import 和完整的标识符名称(句点属性标识)。
+#############
+# impter.py #
+#############
+import imptee
+imptee.show()
+imptee.foo = 123
+print 'foo from impter:', imptee.foo
+imptee.show()
+完成相应修改后, 结果如我们所料:
+foo from imptee: abc
+foo from impter: 123
+foo from imptee: 123
+</code></pre>
