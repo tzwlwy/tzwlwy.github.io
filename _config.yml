@@ -82,7 +82,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-      title: "刘林的博客",
+      title: "Tesla's Blog",
         href: "https://tesla9527.github.io/"
     },
     {
