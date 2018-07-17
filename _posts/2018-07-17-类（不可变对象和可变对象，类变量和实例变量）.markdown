@@ -33,6 +33,7 @@ print(Foo1.x) #{2003: 'poe2', 2004: 'valid path'}
 原文地址：[类变量和实例变量的概念](https://blog.csdn.net/chb4715/article/details/79104376)
 原文地址：[不可变对象和可变对象的概念](https://blog.csdn.net/qq_35976351/article/details/79652880)
 
+**类变量和实例变量的概念**
 ```python
 class Person():
     person = 'alive' #这是类变量
@@ -58,5 +59,10 @@ if __name__=="__main__":
     print(p.place)#输出结果：['北京' , '北京']
     print(Person.place)#输出结果：['北京' , '北京']
 ```
+
+**不可变对象和可变对象的概念**
+这个之前理解过，大体可以理解为引用地址是否改变
+在Python中，数字、字符串、元组是不可变的，，列表、字典、集合是可变的。
+
 
 
