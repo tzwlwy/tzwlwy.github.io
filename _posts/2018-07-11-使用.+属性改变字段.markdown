@@ -10,15 +10,13 @@ tags:
 **自己不太使用这种方法，以后可能会有用**
 
 <pre><code>
-#############
 # imptee.py #
-#############
+
 foo = 'abc'
 def show():
 print 'foo from imptee:', foo
-#############
+
 # impter.py #
-#############
 from imptee import foo, show
 show()
 foo = 123
@@ -30,9 +28,8 @@ foo from imptee: abc
 foo from impter: 123
 foo from imptee: abc
 唯一的解决办法是使用 import 和完整的标识符名称(句点属性标识)。
-#############
+
 # impter.py #
-#############
 import imptee
 imptee.show()
 imptee.foo = 123
