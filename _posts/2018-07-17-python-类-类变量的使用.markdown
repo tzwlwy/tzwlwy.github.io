@@ -1,0 +1,52 @@
+---
+layout: post
+category: "python"
+title:  "类-类的全局变量"
+header-img: "img/in-post/header.jpg"
+tags:
+    - python
+---
+
+**之前做websocket的时候，被那个websocket的服务搞得弄了很久，因为要把一个类的实例作为全局变量，之前的做法是把
+这个实例写在方法里，作为参数进行传递，但是这个方法不是很好，因为每次都需要调用那个方法，也要重新生成实例，可能中间
+还会存在一些问题，还好当初没出现问题**
+
+之前是这么写的
+```python
+def return_servise():
+    PORT = 9001
+    server = WebsocketServer(PORT, "192.168.22.39")
+    return server
+
+def run_servise(server=return_servise()):
+   myThread1 = myThread_servise(server)
+   myThread2 = myThread_order()
+   myThread1.start()
+   myThread2.start()
+   myThread1.join()
+   myThread2.join()
+
+```
+
+今天看了类的一个实例后，我发现可以改变一些，实例如下
+可以把那个服务写在类的全局变量中，这样就不会有问题了
+
+```python
+class InstCt(object):
+   count = 0 # count is class attr count 是一个类属性
+
+   def __init__(self): # increment count 增加count
+      InstCt.count += 1
+
+   def howMany(self):  # return count 返回count
+       return InstCt.count
+
+   def __del__(self):  # decrement count 减少count
+       InstCt.count -= 1
+
+a = InstCt()
+b = InstCt()
+print(a.howMany())
+del b
+print(a.howMany())
+```
