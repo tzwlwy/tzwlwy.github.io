@@ -8,8 +8,11 @@ tags:
 ---
 
 **yield**
+
 其实yield 是针对generator 的一种，通过yield 可以输出以及去除元素，
+
 类似列表的remove和for 循环结合使用，下面是两个例子
+
 
 ```python
 def simpleGen():
