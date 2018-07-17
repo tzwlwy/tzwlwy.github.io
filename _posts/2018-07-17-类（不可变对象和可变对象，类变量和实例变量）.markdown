@@ -1,0 +1,35 @@
+---
+layout: post
+category: "python"
+title:  "不可变对象和可变对象，类变量和实例变量"
+header-img: "img/in-post/header.jpg"
+tags:
+    - python
+---
+
+**在复习基础知识时，书上的一个例子我有点迷惑，代码如下**
+
+```python
+class Foo(object):
+    x = 1.5
+
+class Foo1(object):
+   x = {2003: 'poe2'}
+
+a=Foo()
+# a.x = 1.7
+a.x = Foo.x + 0.2
+print(a.x)   #1.7
+print(Foo.x) #1.5
+
+foo = Foo1()
+foo.x[2004] = 'valid path'
+print(foo.x)  #{2003: 'poe2', 2004: 'valid path'}
+print(Foo1.x) #{2003: 'poe2', 2004: 'valid path'}
+```
+
+对此我很奇怪，为什么Foo1.x 是 {2003: 'poe2', 2004: 'valid path'} 而不是{2003: 'poe2'}
+后来去找刘总沟通，也在网上找到了答案
+原文地址：[类变量和实例变量的概念](https://blog.csdn.net/chb4715/article/details/79104376)
+原文地址：[不可变对象和可变对象的概念](https://blog.csdn.net/qq_35976351/article/details/79652880)
+
