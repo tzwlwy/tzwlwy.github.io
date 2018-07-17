@@ -33,3 +33,30 @@ print(Foo1.x) #{2003: 'poe2', 2004: 'valid path'}
 原文地址：[类变量和实例变量的概念](https://blog.csdn.net/chb4715/article/details/79104376)
 原文地址：[不可变对象和可变对象的概念](https://blog.csdn.net/qq_35976351/article/details/79652880)
 
+```python
+class Person():
+    person = 'alive' #这是类变量
+    def __init__(self,name ,age):
+        self.name = name #这是实例变量
+        self.age = age   #这是实例变量
+        self.gender = '男' #这是实例变量
+        #a = 456     #不能写这里，会出错
+    place = ['地球','中国'] #这是类变量
+```
+上面这个简单的讲述了什么是实例变量什么是类变量，这个其实是比较好理解的
+在实例化时，如果直接改变类变量会影响实例变量，实例变量不会影响到类变量
+下文可以看到区别
+
+```python
+if __name__=="__main__":
+    p = Person('chb' , 18)
+    p.person = 'die'
+    print(p.person)#输出结果：die
+    print(p.__dict__)#输出结果：{'gender': '男', 'person': 'die', 'age': 18, 'name': 'chb'}
+    print(Person.person)  #输出结果：alive
+    p.place[1] = '北京'
+    print(p.place)#输出结果：['北京' , '北京']
+    print(Person.place)#输出结果：['北京' , '北京']
+```
+
+
