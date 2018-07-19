@@ -1,0 +1,78 @@
+---
+layout: post
+category: "python"
+title:  "多继承优先级"
+header-img: "img/in-post/header.jpg"
+tags:
+    - python
+---
+
+**最近重温基础知识的时候，看到了多继承的实例，顺便看了下继承的优先级，发现跟书上写的有点不太一样**
+```python
+class P1(object): # parent class 1 父类1
+   def foo(self):
+      print ('called P1-foo()')
+
+   def bar(self):
+       print('called P1-bar()')
+
+class P2(object): # parent class 2 父类2
+   def foo(self):
+       print('called P2-foo()')
+
+   def bar(self):
+       print('called P2-bar()')
+
+
+class C1(P1, P2): # child 1 der. from P1, P2 #子类1，从P1，P2 派生
+    pass
+class C2(P1, P2): # child 2 der. from P1, P2 #子类2，从P1，P2 派生
+  # def bar(self):
+  #   print( 'called C2-bar()')
+
+  def foo(self):
+      print('called C2-foo()')
+
+class GC(C1, C2): # define grandchild class #定义子孙类
+   pass #
+
+gc = GC()
+gc.foo()   # GC ==> C1 ==> C2==>P1
+gc.bar() # GC ==> C1 ==> C2==>P1==>P2
+```
+
+```python
+class P1: #(object): # parent class 1 父类1
+   def foo(self):
+      print ('called P1-foo()')
+
+   def bar(self):
+       print('called P1-bar()')
+
+class P2: #(object): # parent class 2 父类2
+   def foo(self):
+       print('called P2-foo()')
+
+   def bar(self):
+       print('called P2-bar()')
+
+
+class C1(P1, P2): # child 1 der. from P1, P2 #子类1，从P1，P2 派生
+    pass
+class C2(P1, P2): # child 2 der. from P1, P2 #子类2，从P1，P2 派生
+  def bar(self):
+    print( 'called C2-bar()')
+
+  # def foo(self):
+  #     print('called C2-foo()')
+
+class GC(C1, C2): # define grandchild class #定义子孙类
+   pass #
+
+gc = GC()
+gc.foo()   # GC ==> C1 ==> C2==>P1
+gc.bar() # GC ==> C1 ==> C2==>P1==>P2
+```
+这两个其实没有太大区别，唯一的就是父类P1,P2是否继承了0bject这个基础类，按照书上
+解释的，一个会造成广度优先，另一个则会深度优先，但经过我试验，在python3.64版本上
+都是广度优先，而非深度优先
