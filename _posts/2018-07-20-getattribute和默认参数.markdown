@@ -23,7 +23,6 @@ TypeError: __getattribute__() missing 1 required positional argument: 'required2
 我想看这个方法的内部逻辑是什么，很可惜，点不进去，
 后来发现它这边每次传入的值都是str，并且其实它每次只传入一个参数
 改进后所有的代码如下
-完美解决
 
 
 ```python
