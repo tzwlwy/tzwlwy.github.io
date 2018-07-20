@@ -4,7 +4,7 @@ category: "python"
 title:  "类-类的全局变量"
 header-img: "img/in-post/header.jpg"
 tags:
-    - python
+    - Python
 ---
 
 **之前做websocket的时候，被那个websocket的服务搞得弄了很久，因为要把一个类的实例作为全局变量，之前的做法是把

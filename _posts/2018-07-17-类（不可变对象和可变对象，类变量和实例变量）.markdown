@@ -4,7 +4,7 @@ category: "python"
 title:  "不可变对象和可变对象，类变量和实例变量"
 header-img: "img/in-post/header.jpg"
 tags:
-    - python
+    - Python
 ---
 
 **在复习基础知识时，书上的一个例子我有点迷惑，代码如下**

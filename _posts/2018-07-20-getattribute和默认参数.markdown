@@ -4,7 +4,7 @@ category: "python"
 title:  "getattribute和默认参数 *args **kwargs"
 header-img: "img/in-post/header.jpg"
 tags:
-    - python
+    - Python
 ---
 
 今天再看基础知识的时候看到了一个以前忽略的方法，叫__getattribute__，了解了一下
