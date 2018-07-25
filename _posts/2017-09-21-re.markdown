@@ -1,15 +1,12 @@
 ---
 layout: post
-title:  "正则总结"
+title:  "正则总结第一版"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - Python
 ---
 
-
-*对于不熟悉正则的同学来说，需要对比关照正则一些符号才更为直观，暂时未放图片，更多请访问印象笔记
-
-
+**正则总结第一版**
 ```python
 import re
 tt = "Tina is a good girl, she is cOOl, clever, and so on..."
@@ -49,19 +46,6 @@ w = re.findall(r'(\d)abc\1','5abc522abc4')
 //引用编号为<number>的分组匹配到字符串，也就是说数字abc数字，前后数字需保持一致
 print(w)
 
-import re
-result = re.match('you', 'Young Frankenstein')
-source = 'Young Frankensteinn1n'
-m = re.match('You', source)
-print(m, type(m))
-print(m.group(), type(m.group()))
-
-m = re.match('.*Frank', source)  #这样返回到需求为止的所有字符串
-// 使用. 代表任意除\n 外的字符；
-// 使用* 表示任意多个字符（包括0 个）；
-//使用? 表示可选字符（0 个或1 个）**
-if m:
-    print(m.group())
 
 m = re.findall('n', source) #返回一个列表
 m = re.findall('n.', source)#返回所有含有n. 的，如果n在最后，那么不匹配
@@ -114,28 +98,3 @@ print(b)
 ['23']
 ```
 
-```python
-import re
-a = "123abc456d"
-print(re.search("([0-9]*)([a-z]*)([0-9]*)d",a).groups())   #groups 返回的是一个元祖，由除了group（0）之外的元素组成
-print(re.search("([0-9]*)([a-z]*)([0-9]*d)",a).group(0))   #123abc456,返回整体
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(1))   #123
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(2))   #abc
-print(re.search("([0-9]*)([a-z]*)([0-9]*)",a).group(3))   #456
-//group(1) 列出第一个括号匹配部分，group(2) 列出第二个括号匹配部分，group(3) 列出第三个括号匹配部分。
-
-iter = re.finditer(r'\d+','12 drumm44ers drumming, 11 ... 10 ...')
-for i in iter:
-    //print(i)
-    print(i.group())
-    print(i.span())
-```
-<pre><code>
-执行结果如下：
-'''
-(0, 2)
-(8, 10)
-(24, 26)
-(31, 33)
-print(re.split('\d+','one1two2three3four4five5'))
-['one', 'two', 'three', 'four', 'five', '']</code></pre>
