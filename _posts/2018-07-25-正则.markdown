@@ -8,6 +8,7 @@ tags:
 ---
 
 之前作过一版正则的，但是再看的时候看的很累，这次重新总结一下
+
 **match**
 ```python
 import re
@@ -25,3 +26,14 @@ m = re.match('.*Frank', source)  #这样返回到需求为止的所有字符串
 if m:
     print(m.group())
 ```
+**匹配多个字符串**
+```python
+import re
+bt = 'bat|bet|bit'
+m = re.match(bt, 'bat')
+n= re.match(bt, 'bet')
+if m  is not None:
+    if n is not None:
+       print(m.group(),n.group())
+```
+上面这个代码的关注点在于我们是用 bt 去匹配后面的字符串，只要bt里面任意一个满足，就不为None
