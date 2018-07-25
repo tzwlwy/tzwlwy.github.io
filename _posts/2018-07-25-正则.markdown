@@ -1,0 +1,27 @@
+---
+layout: post
+category: "python"
+title:  "正则总结"
+header-img: "img/in-post/header.jpg"
+tags:
+    - Python
+---
+
+之前作过一版正则的，但是再看的时候看的很累，这次重新总结一下
+**match**
+```python
+import re
+'''
+match 是从对应的字符串开头匹配对应的内容，match不到则为None
+'''
+result = re.match('you', 'Young Frankenstein')
+print(result)  #None
+source = 'Young Frankensteinn1n'
+m = re.match('You', source)
+print(m, type(m))#返回的是一个object
+print(m.group(), type(m.group()))#匹配的结果
+
+m = re.match('.*Frank', source)  #这样返回到需求为止的所有字符串
+if m:
+    print(m.group())
+```
