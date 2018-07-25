@@ -8,6 +8,9 @@ tags:
 ---
 
 之前作过一版正则的，但是再看的时候看的很累，这次重新总结一下
+![img](/img/in-post/re/1.jpg)
+![img](/img/in-post/re/2.jpg)
+![img](/img/in-post/re/3.jpg)
 
 **match**
 ```python
