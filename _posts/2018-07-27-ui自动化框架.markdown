@@ -1,0 +1,93 @@
+---
+layout: post
+category: "python"
+title:  "ui自动化框架-cls-self"
+header-img: "img/in-post/header.jpg"
+tags:
+    - Python
+---
+
+重新整理ui自动化的时候，套用了别人的框架，在他人基础上进行理解与改善
+发现别人是用cls作为传递参数而不是以往我熟悉的self，经过了解，cls作为
+传参可以改进以往一个case必须从登陆开始的运行习惯，1个case跑完，下一个
+case可以在当前case下继续完善，这个不太适用于单元测试，但是单元测试可以
+通过写一个公共方法，重新关闭或者直接切换浏览器运行，所以，我觉定此次ui
+自动化通过传类来进行，部分代码如下
+
+```python
+# coding=utf-8
+import time
+import unittest
+from framework.browser_engine import BrowserEngine
+from pageobjects.baidu_homepage import HomePage
+import commen_method
+
+
+
+class BaiduSearch(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(self):
+        """
+        主要是测试的前提准备工作
+        :return:
+        """
+
+        self.browse = BrowserEngine()
+        self.driver = self.browse.open_browser()
+
+    @classmethod
+    def tearDownClass(self):
+        """
+        测试结束后的操作，这里基本上都是关闭浏览器
+        :return:
+        """
+        self.driver.quit()
+
+
+    def test_baidu_search(self):
+        """
+        这里一定要test开头，把测试逻辑代码封装到一个test开头的方法里。
+        :return:
+        """
+        homepage = HomePage(self.driver)
+        homepage.type_search('selenium')  # 调用页面对象中的方法
+        homepage.send_submit_btn()     #调用页面对象类中的点击搜索按钮方法
+        time.sleep(2)
+        homepage.get_windows_img()  # 调用基类截图方法
+        print('test')
+        try:
+            assert 'selenium' in homepage.get_page_title()  # 调用页面对象继承基类中的获取页面标题方法
+            print ('Test Pass.')
+        except Exception as e:
+            print ('Test Fail.', format(e))
+    #
+    def test_search2(self):
+        homepage = HomePage(self.driver)
+        homepage.type_search('python')  # 调用页面对象中的方法
+        homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
+        time.sleep(2)
+        homepage.get_windows_img()  # 调用基类截图方法
+        commen_method.tearDown(self.driver)
+
+
+
+    def test_search5(self):
+        self.driver.get('https://tzwlwy.github.io/')
+        time.sleep(4)
+
+    def test_search4(self):
+        homepage = HomePage(self.driver)
+        self.driver.get('https://www.baidu.com/')
+
+        homepage.type_search('selenium')  # 调用页面对象中的方法
+        time.sleep(5)
+        assert 'selenium' in homepage.get_page_title()
+        homepage.send_submit_btn()     #调用页面对象类中的点击搜索按钮方法
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+```
