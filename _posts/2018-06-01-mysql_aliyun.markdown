@@ -41,4 +41,9 @@ update user set host='%' where user='root' and host='localhost'; 所有ip都可�
 **mysql linux部分指令**
 <pre><code>
 service mysqld restart 重启sql服务
+启动mysql
+sudo systemctl start mysqld
+停止、重启My SQL 服务的命令如下：
+sudo systemctl stop mysqld
+sudo systemctl restart mysqld
 </code></pre>
