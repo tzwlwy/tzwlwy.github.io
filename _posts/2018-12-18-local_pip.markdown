@@ -1,0 +1,20 @@
+---
+layout: post
+category: "python"
+title:  "查看本地安装包文档属性"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - python
+---
+
+
+**一直想看第三方库的一些文档，有时候网上找不到的情况下，就只能自己看帮助文档了
+这边提供了一个本地查看文档的方法
+**
+<pre><code>
+首先打开命令行输入：
+python -m pydoc -p 1234
+python -m pydoc表示打开pydoc模块，这个模块就是用来查看python文档的工具
+-p 1234表示在端口号1234上打开server，这个端口号可以自行设置
+然后就可以在浏览器中打开链接“http://localhost:1234/”看到如图所示的内容
+</code></pre>

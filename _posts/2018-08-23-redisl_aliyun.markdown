@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "other"
+category: "linux"
 title:  "阿里云安装redis和mongodb"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
@@ -13,7 +13,7 @@ tags:
 **安装redis**
 
 <pre><code>
-首先添加EP EL 仓库，然后更新yum 源：
+首先添加EP EL 仓库，然后更新yum 源    ：
 sudo yum install epel release
 sudo yum update
 然后安装Redis 数据库：
