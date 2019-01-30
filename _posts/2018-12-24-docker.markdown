@@ -27,7 +27,7 @@ docker rm  -f  2b1b7a428627（docker  ps  后的 ID）  删除不需要的容器
 启动docker 服务：
 docker run -p 9999:5000 -v /app:/tmp -d --name mydocker -e  PYTHONPATH="/usr/local/lib/python3.6/site-packages" -test mydocker1.29.2   python  /tmp/interface_test/run.py runserver --host 0.0.0.0
 -p 端口映射，通过访问服务器的9999端口来监听程序的5000端口
--v 数据映射，？？？
+-v 数据映射，？？？？
 -d 后台运营容器并返回容器id
 -e  PYTHONPATH="/usr/local/lib/python3.6/site-packages" 指定工作路径，发现好像不需要也可以运行
 -name 为容器指定一个名称
