@@ -32,6 +32,7 @@ tags:
 第三步 建立config文件
     在/c/Users/you（系统名称）/.ssh文件夹 中新建config文件
     填入信息：
+<pre><code>
 #gitlab
 Host gitlab
         HostName 192.*.*.*（更改为本地gitlab的服务器ip地址。如果有域名的话填写域名地址）
@@ -41,15 +42,15 @@ Host gitlab
 Host github
         HostName github.com
         IdentityFile ~/.ssh/id_rsa_github
-
+</code></pre>
 
 运行以下命令（期间可能要你输入密码，按照提示输入密码即可
-
+<pre><code>
 ssh-add id_rsa #添加gitlab私钥
 ssh-add id_rsa_github #添加github私钥
 ssh-add -L #查看公钥
 ssh-add -l #查看私钥
-
+</code></pre>
 测试是否配置成功
 1、找到/c/Users/you（系统名称）/.ssh文件夹。
 2、在本文件夹【右键】点击【Git Bash Here】
@@ -62,19 +63,19 @@ Hi ***! You've successfully authenticated, but GitHub does not provide shell acc
 
 配置成功之后不代表万事大吉，我们每一个项目都需要为他配置用户名和邮箱
 gitlab由于是经常使用的，所以用户名和邮箱配置为全局的
-
+<pre><code>
 cd **/gitlab #存放gitlab代码的路径
 git init
 git config --global user.name 'gitlab注册用户名'
 git config --global user.email 'gitlab注册邮箱'
-
+</code></pre>
 github使用较少，所以用户名和邮箱配置为局部的
-
+<pre><code>
 cd **/github #存放github代码的路径
 git init
 git config --local user.name 'github注册用户名'
 git config --local user.email 'github注册邮箱'
-
+</code></pre>
 这样，万事大吉了。
 
 
