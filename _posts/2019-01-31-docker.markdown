@@ -1,0 +1,43 @@
+---
+layout: post
+category: "linux"
+title:  "docker上安装python项目123233"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - linux
+    - docker
+---
+
+
+**linux 下安装 python 项目
+**
+<pre><code>
+本次安装我们使用docker 进行安装
+在装有docker 的前提下，我们输入
+docker search flask  来进行搜索镜像
+然后选择我们要下载的镜像
+docker pull tiangolo/uwsgi-nginx-flask:python3.6 进行下载
+通过使用命令语句 docker images  来查看所有的镜像文件
+docker ps  查看运行的docker
+docker logs 2b1b7a428627（docker  ps  后的 ID）
+docker stop 2b1b7a428627（docker  ps  后的 ID）  停止容器
+docker command --help 更深入的了解指定的 Docker 命令使用方法
+docker rm  2b1b7a428627（docker  ps  后的 ID）  删除不需要的容器（容器必须先stop）
+docker rm  -f  2b1b7a428627（docker  ps  后的 ID）  删除不需要的容器（容器不需要先stop，直接删除，需要好好补充点linux命令了）
+启动docker 服务：
+docker run -p 9999:5000 -v /app:/tmp -d --name mydocker -e  PYTHONPATH="/usr/local/lib/python3.6/site-packages" -test mydocker1.29.2   python  /tmp/interface_test/run.py runserver --host 0.0.0.0
+-p 端口映射，通过访问服务器的9999端口来监听程序的5000端口
+-v 数据映射，？？？？
+-d 后台运营容器并返回容器id
+-e  PYTHONPATH="/usr/local/lib/python3.6/site-packages" 指定工作路径，发现好像不需要也可以运行
+-name 为容器指定一个名称
+-test  指定运行的镜像名字
+python  /tmp/interface_test/run.py runserver --host 0.0.0.0  启动时执行指定的python 文件，这个也可以在容器启动后执行
+后面的runserver --host 0.0.0.0  是flask 里面使用manager包了一层需要这么启动
+docker exec -it mydocker3 /bin/bash    进到容器里面
+docker exec -it mydocker3 /bin/sh      进到容器里面，有时候不是bash启动就可以用这个
+docker rmi docker.io/tiangolo/uwsgi-nginx-flask:python2.7  删除镜像  (docker rmi REPOSITORY :TAG)
+docker inspect flask-test （flask-test 是容器的tag）这个可以看到容器的一些配置信息，环境变量，启动方式等等
+docker commit -a "yan.wang" -m "yan.wang" a6cd17386722 mydocker  提交docker
+这边需要注意两个点，a6cd17386722是启动的容器id，mydocker是你提交后的镜像名
+</code></pre>
