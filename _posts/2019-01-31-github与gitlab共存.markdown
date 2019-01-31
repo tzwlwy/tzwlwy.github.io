@@ -10,7 +10,7 @@ tags:
 **windows下github与gitlab共存**
 个人倾向gitlab用于公司项目，github用于自己博客及demo编写
 网上百度看这两者是可以共存的，今天终于把这个问题解决了
-<pre><code>
+
 第一步 生成gitlab ssh key
 1、找到/c/Users/you（系统名称）/.ssh文件夹。
 2、在本文件夹【右键】点击【Git Bash Here】
