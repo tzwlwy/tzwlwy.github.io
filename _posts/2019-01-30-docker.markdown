@@ -38,6 +38,6 @@ docker exec -it mydocker3 /bin/bash    进到容器里面
 docker exec -it mydocker3 /bin/sh      进到容器里面，有时候不是bash启动就可以用这个
 docker rmi docker.io/tiangolo/uwsgi-nginx-flask:python2.7  删除镜像  (docker rmi REPOSITORY :TAG)
 docker inspect flask-test （flask-test 是容器的tag）这个可以看到容器的一些配置信息，环境变量，启动方式等等
-docker commit -a "yan.wang" -m "yan.wang" a6cd17386722 mydocker  提交docker
+docker commit -a "yan.wang" -m "yan.wang" c8710a17cdad  yan.wang.test  提交docker
 这边需要注意两个点，a6cd17386722是启动的容器id，mydocker是你提交后的镜像名
 </code></pre>

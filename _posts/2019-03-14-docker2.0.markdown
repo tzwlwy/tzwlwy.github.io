@@ -1,0 +1,50 @@
+---
+layout: post
+category: "git"
+title:  "github与gitlab共存"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - git
+---
+
+
+<pre><code>
+ sudo docker run -i -t yan.wang.test /bin/bash
+ yum -y install wget
+ yum  -y install lrzsz
+ wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
+ yum -y install gcc automake autoconf libtool make (安装make，vim等基础功能)
+ yum install zlib zlib-devel -y
+ yum install libffi-devel -y
+ yum -y remove gcc automake autoconf libtool make (移除make，vim等基础功能)
+ yum  -y install unzip  （通过unzip + 压缩的zip文件实现解压）
+ tar -xvf Python-3.7.2.tgz
+ cd Python-3.7.2
+ ./configure --prefix=/usr/local/python3.7.2
+ make
+ make install
+
+ mv /usr/bin/python/usr/bin/python_bak
+ ln -s /usr/local/python3.7.2/bin/pip3.7 /usr/bin/pip3
+ ln -s /usr/local/python3.7.2/bin/python3 /usr/bin/python3.7
+
+  rm -rf /usr/bin/python  删除软链接
+
+
+
+  安装完之后yum 就会出现问题，vi /usr/bin/yum  把 第一行后面python 版本后面加上2.7
+  同理  vi  /usr/libexec/urlgrabber-ext-down  把 第一行后面python 版本后面加上2.7
+  yum 正常使用
+
+
+ docker commit -a "yan.wang" -m "yan.wang" 302b96cbc941  yan.wang.test
+</code></pre>
+
+
+
+
+
+
+
+
+
