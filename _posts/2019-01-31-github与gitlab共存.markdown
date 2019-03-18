@@ -47,6 +47,7 @@ Host github
 
 运行以下命令（期间可能要你输入密码，按照提示输入密码即可）
 <pre><code>
+ssh-agent.exe bash  #获取权限
 ssh-add id_rsa #添加gitlab私钥
 ssh-add id_rsa_github #添加github私钥
 ssh-add -L #查看公钥
