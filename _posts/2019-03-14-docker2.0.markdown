@@ -28,7 +28,7 @@ tags:
  ln -s /usr/local/python3.7.2/bin/pip3.7 /usr/bin/pip3
  ln -s /usr/local/python3.7.2/bin/python3 /usr/bin/python3.7
 
-  rm -rf /usr/bin/python  删除软链接
+  rm -rf /usr/bin/pip3  删除软链接
 
 
 
