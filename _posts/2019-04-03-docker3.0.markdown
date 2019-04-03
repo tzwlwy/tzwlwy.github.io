@@ -8,7 +8,9 @@ tags:
 ---
 
 一直想把自己本地的项目部署到linux服务器上，但最终都困在websocket绑定上
+
 一直报 OSError: [Errno 99] Cannot assign requested address
+
 因为本身也不是很懂linux服务器，走了很多弯路，最终在运维小伙伴帮助下解决了这个问题
 ```python
 from websocket_server import WebsocketServer
