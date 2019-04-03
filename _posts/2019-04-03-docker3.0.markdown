@@ -1,0 +1,56 @@
+---
+layout: post
+category: "docker"
+title:  "docker3.0笔记"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - docker
+---
+
+一直想把自己本地的项目部署到linux服务器上，但最终都困在websocket绑定上
+一直报 OSError: [Errno 99] Cannot assign requested address
+因为本身也不是很懂linux服务器，走了很多弯路，最终在运维小伙伴帮助下解决了这个问题
+```python
+from websocket_server import WebsocketServer
+def return_servise():
+    PORT = 5050
+    server = WebsocketServer(PORT, "192.168.15.71")
+
+    print(server)
+    return server
+```
+之前代码是这么写的，中间也看了WebsocketServer 源码，甚至认为是allow_reuse_address这个字段的原因
+最终发现修改如下
+```python
+from websocket_server import WebsocketServer
+def return_servise():
+    PORT = 5050
+    server = WebsocketServer(PORT, "0.0.0.0")
+
+    print(server)
+    return server
+```
+前端代码如下
+```python
+ws = new WebSocket('ws://' + '192.168.15.71' + ':5050');
+```
+
+然后启动docker服务器的时候 需要启动脚本
+docker run -p 1998:1998 -p 5050:5050 -d --name yan.wang.test14   -test yan.wang.test1  /usr/bin/python3.7 /testing1/testing/run_all.py
+-p 1998:1998 -p 5050:5050需要启动2个端口
+/usr/bin/python3.7  python3.7的绝对地址
+/testing1/testing/run_all.py  启动脚本的绝对地址
+
+
+以上，问题解决，非常开心！
+
+
+
+
+
+
+
+
+
+
+

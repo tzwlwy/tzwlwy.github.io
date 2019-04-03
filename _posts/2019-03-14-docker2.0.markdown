@@ -1,12 +1,11 @@
 ---
 layout: post
-category: "git"
+category: "docker"
 title:  "docker2.0笔记"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
-    - git
+    - docker
 ---
-
 
 <pre><code>
  sudo docker run -i -t yan.wang.test /bin/bash

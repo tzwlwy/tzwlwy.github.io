@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "linux"
+category: "docker"
 title:  "docker上安装python项目"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
