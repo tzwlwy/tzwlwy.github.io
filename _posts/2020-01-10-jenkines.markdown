@@ -6,7 +6,7 @@ header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - jenkines
 ---
-
+<pre><code>
 咋一看，四个月没更新博客了，刚好买了一个服务器，重新复习一下，赶快更新一波
 
 #安装jdk，因为jenkines需要依赖jdk
@@ -29,7 +29,7 @@ vi /etc/sysconfig/iptables
 systemctl reload iptables
 #然后根据ip+端口号进行访问，按照操作进行部署即可
 
-
+</code></pre>
 
 
 
