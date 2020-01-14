@@ -24,7 +24,7 @@ JENKINS_PORT="23330"
 #将端口号加入防火墙
 vi /etc/sysconfig/iptables
 #新增一行信息
--A INPUT -p tcp -m state --state NEW -m tcp --dport 24450 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 23330 -j ACCEPT
 #重启防火墙
 systemctl reload iptables
 #然后根据ip+端口号进行访问，按照操作进行部署即可
