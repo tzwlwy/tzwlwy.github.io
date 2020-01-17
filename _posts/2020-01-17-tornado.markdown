@@ -1,0 +1,26 @@
+---
+layout: post
+category: "tornado"
+title:  "tornado问题"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - tornado
+---
+<pre><code>
+遇到以下问题
+RuntimeError: There is no current event loop in thread 'Thread-2'.
+
+这是因为高版本的tornado 不兼容，只要安装低版本的就行了
+解决方案：
+pip3 install tornado==4.5.3
+
+</code></pre>
+
+
+
+
+
+
+
+
+
