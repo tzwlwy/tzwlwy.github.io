@@ -71,7 +71,7 @@ SELECT name, COUNT(*) FROM   employee_tbl GROUP BY name HAVING COUNT(*)>1;
 
 **alter**
 <pre><code>
- ALTER TABLE testalter_tbl  DROP i;
+ ALTER TABLE testalter_tbl  DROP i ;
 删除字段i
  ALTER TABLE testalter_tbl ADD i INT;
 增加字段i
