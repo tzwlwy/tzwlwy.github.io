@@ -57,6 +57,17 @@ SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a RIGHT JOIN
 right join 与left join 刚好相反，右表为right join 右边的表
 </code></pre>
 
+**group having**
+<pre><code>
+单纯使用group by 一般配合count ，sum，min，avg等函数使用，根据查询内容进行分组
+SELECT name, COUNT(*) FROM   employee_tbl GROUP BY name;
+**使用 WITH ROLLUP**
+WITH ROLLUP 可以实现在分组统计数据基础上再进行相同的统计（SUM,AVG,COUNT…）
+SELECT name, SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;
+**having**对分组内容根据帅选字段进行在一轮过滤
+SELECT name, COUNT(*) FROM   employee_tbl GROUP BY name HAVING COUNT(*)>1;
+</code></pre>
+
 
 **alter**
 <pre><code>
