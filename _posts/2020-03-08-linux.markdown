@@ -1,0 +1,63 @@
+---
+layout: post
+category: "linux"
+title:  "linux总结"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - linux
+---
+
+文件夹相关
+<pre><code>
+ls: 列出目录
+cd：切换目录
+pwd：显示目前的目录
+mkdir：创建一个新的目录
+rmdir：删除一个空的目录
+cp: 复制文件或目录
+rm: 移除文件或目录
+mv: 移动文件与目录，或修改文件与目录的名称
+
+tar cvzf molbase-pms.tar.gz molbase-pms/  打包文件夹
+tar -zxvf molbase-pms.tar.gz molbase-pms/ 解压文件
+
+改变a.txt的所属者为Lisa
+chown Lisa：Lisa a.txt
+chown Lisa a.txt 【只让改所属者，没让改所属组】
+</code></pre>
+
+文件相关
+<pre><code>
+grep 语句查找文件内容    
+grep -nP “secretary”molbase-oms-provider.log  
+查看a.txt文件中bbb字符串
+grep 'bbb' a.txt
+将文件a.txt排序生成b.txt
+sort a.txt >b.txt
+查找当前目录以及子目录下文件后缀是xxx的文件
+find ./ -name *.txt
+find ./ -name *.xxx
+查找jenkins配置文件
+cd /etc
+find  -name jenkins 
+
+
+</code></pre>
+
+进程相关
+<pre><code>
+ps aux为查看系统当前所有进程命令
+查看conrob进程的命令
+ps -ef | grep conrob
+查看服务状态
+service mysqld status
+查看mysql端口号
+/etc/my.cnf
+
+
+</code></pre>
+系统相关
+<pre><code>
+显示日期的命令
+date
+</code></pre>
