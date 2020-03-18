@@ -6,7 +6,7 @@ header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - 复习
 ---
-<pre><code>
+
 测试框架：
 测试框架主要分几部分：
 第一部分是flask框架，里面就是最基本的flask框架的几个模块，包含static，templates及下面的forms及views，但实际我使用的主要就是static及views，因为我前段用的是饿了么的element框架，所以并不是很需要用他原生的。
@@ -15,4 +15,3 @@ tags:
 （在UIMap里面放各个页面的元素信息，App.config放一些默认的配置信息，TestCase存放所需要的测试用例，TestData存放一些测试数据，以json或者excel的形式；Modules放每个页面的一些方法；CommonHelper 放一些公用的方法 ，通过二次封装WebApi里的方法，来更好的维护与编写测试用例。）
 在下面还有一个servise的包，里面主要是WebsocketServer的一些方法
 再然后就是一个配置文件及run启动文件了，启动文件主要是运行两个线程，一个起flask的线程，还有一个起websocket的线程
-</code></pre>
