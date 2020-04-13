@@ -1,0 +1,16 @@
+---
+layout: post
+category: "linux"
+title:  "iostat"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - linux
+    - 性能
+---
+**iostat**
+链接：https://www.cnblogs.com/ftl1012/p/iostat.html
+iostat 安装
+# iostat属于sysstat软件包。可以直接安装。
+yum install sysstat
+显示所有设备负载情况
+iostat
