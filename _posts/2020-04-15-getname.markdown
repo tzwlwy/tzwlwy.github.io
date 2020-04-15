@@ -1,0 +1,39 @@
+---
+layout: post
+category: "python"
+title:  "python 装饰器获取当前运行类名和方法名"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - python
+---
+
+
+**match**
+```python
+from functools import wraps
+def decorater(func):
+    @wraps(func)  # 保持原函数名不变
+    def wrapper(*args, **kwargs):
+        print('位置参数:{}'.format(args))
+        print('关键字参数:{}'.format(kwargs))
+        res = func(*args, **kwargs)
+        print('装饰器内函数名:%s' % func.__name__)
+        print('返回值:%s' % res)
+        print('函数func所属的类:%s' % func.__qualname__)
+        return res
+    return wrapper
+
+
+class Name():
+    @decorater
+    def func2(self, *args, **kwargs):
+
+        return 'return'
+
+
+if __name__ == '__main__':
+    a = Name()
+    a.func2(1, 2, a=3, b=4)
+    print('装饰外内函数名:%s' % a.func2.__name__)
+
+```

@@ -14,4 +14,3 @@ iostat 安装
 yum install sysstat
 显示所有设备负载情况
 iostat
-test
