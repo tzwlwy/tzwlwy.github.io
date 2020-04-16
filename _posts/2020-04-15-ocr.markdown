@@ -1,0 +1,104 @@
+---
+layout: post
+category: "python"
+title:  "百度ocr 识别验证码"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - python
+---
+
+
+**截图获取验证码图片**
+```python
+from selenium import webdriver
+import time
+from PIL import Image
+
+url = "http://passport.molbase.cn/zh/auth/login?type=login&return_url=http://www.molbase.cn/#402d19e50fff44c827a4f3b608bd5812"
+chrome_driver_path=r'C:\Users\24475\PycharmProjects\untitled2\chromedriver.exe'
+driver = webdriver.Chrome(chrome_driver_path)
+driver.maximize_window()
+
+time.sleep(2)
+
+driver.get(url)
+
+time.sleep(5)
+ca=driver.find_element_by_id('cpa_code')
+ca.click()
+time.sleep(2)
+captcha_frame_abs_xy = driver.find_element_by_id('cpa_code').location
+d=driver.find_element_by_xpath('//*[@id="cpa_code"]').location
+print(d)
+
+print("======")
+print(captcha_frame_abs_xy)
+#  网页截图 + 验证码截图
+
+driver.get_screenshot_as_file(r'C:\Users\24475\PycharmProjects\untitled2\temp\1.png')  # 比较好理解
+im = Image.open(r'C:\Users\24475\PycharmProjects\untitled2\temp\1.png')
+# x=1510
+# y=410
+box = (1502, 401, 1651, 456)  # 设置要裁剪的区域，这个坐标是验证码图片这个长方形的左上角坐标和右下角坐标，不懂可以问UI美工，用图形编辑工具很容易获得
+print(box)
+print("pass")
+region = im.crop(box)  # 此时，region是一个新的图像对象。
+region.save(r"C:\Users\24475\PycharmProjects\untitled2\temp2\2.png")
+# except:
+#     print("网页截图 + 验证码截图出现异常")
+time.sleep(5)
+driver.close()
+import  ocr
+ocr.getContent(r'C:\Users\24475\PycharmProjects\untitled2\temp2\2.png')
+
+```
+**使用百度aip去识别**
+这里的aip 需要下载baidu-aip
+```python
+from aip import AipOcr
+import re
+
+""" 读取密码 """
+
+#path="my_password.txt"
+def getPassword():
+    # with open(path, "r", encoding="utf-8") as f:
+    APP_ID = ''
+    API_KEY = ''
+    SECRET_KEY = ''
+    return APP_ID, API_KEY, SECRET_KEY
+
+""" 读取图片 """
+
+def get_file_content(file_path):
+    with open(file_path, 'rb') as fp:
+        return fp.read()
+
+
+
+""" 识别图片内容 """
+def getContent(file_path=r"C:\Users\24475\PycharmProjects\untitled2\1.png"):
+    APP_ID, API_KEY, SECRET_KEY = getPassword()
+    client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+
+    image = get_file_content(file_path)
+    """ 调用通用文字识别, 图片参数为本地图片 """
+    res = client.basicAccurate(image)
+    print(type(res))
+    print(res)
+    return res['words_result'][0]['words']
+
+def get_str(res):
+    result = re.sub('\W+', '', res).replace("_", '')
+    print(result)
+    return result
+
+if __name__ == "__main__":
+    # value = '''
+    # te . ssaa 啊啊？aass @#$%^&*()_+A \\/  [a-zA-Z0-9'!"#$%&\'()*+,-./:;<=>?@，。?★、…【】《》？“”‘'！[\\]^_`{|}~]+
+    # '''
+    # import re
+    res=getContent()
+    get_str(res)
+
+```
