@@ -1,0 +1,39 @@
+---
+layout: post
+category: "python"
+title:  "django 学习笔记"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - Django
+---
+
+
+**day1**
+1、创建Django项目
+ooooo
+django-admin startproject helloworld（helloworld 为项目名称）
+
+
+
+
+
+
+
+
+
+
+配置说明：
+manage.py:是Django用于管理本项目的命令行工具，之后进行站点运行，数据库自动生成等都是通过本文件完成。
+
+HelloDjango/__init__.py告诉python该目录是一个python包，暂无内容，后期一些工具的初始化可能会用到
+
+HelloDjango/settings.py Django项目的配置文件，默认状态其中定义了本项目引用的组件，项目名，数据库，静态资源等。
+
+HelloDjango/urls.py 维护项目的URL路由映射，即定义当客户端访问时由哪个模块进行响应。
+
+HelloDjango/wsgi.py 定义WSGI的接口信息，主要用于服务器集成，通常本文件生成后无需改动。
+
+生成迁移:python manager.py makemigrations
+
+执行迁移:python mananger.py migrate
+
