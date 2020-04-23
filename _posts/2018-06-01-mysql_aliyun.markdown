@@ -32,6 +32,7 @@ yum -y remove mysql57-community-release-el7-10.noarch 卸载Yum Repository，防
 
 
 **设置 访问权限**
+开发权限:https://www.cnblogs.com/goxcheer/p/8797377.html
 详情访问 [http://www.jb51.net/article/121173.html](http://www.jb51.net/article/121173.html)
 <pre><code>
 mysql -u root -h localhost -p 登录mysql
