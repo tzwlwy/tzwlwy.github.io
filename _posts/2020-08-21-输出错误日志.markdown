@@ -1,0 +1,16 @@
+---
+layout: post
+category: "python"
+title:  "mysql 方法总结"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - python
+---
+**使用traceback 输出错误日志**
+```python
+import traceback
+try:
+    a = 1 / 0
+except Exception as e:
+    traceback.print_exc()
+```
