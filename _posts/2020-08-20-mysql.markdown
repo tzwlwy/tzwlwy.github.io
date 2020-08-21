@@ -92,7 +92,7 @@ if __name__ == '__main__':
         "port": 3306
     }
 
-    sql = '''select * from zt_story where title like '展鑫%' order by openedDate desc
+    sql = '''select * from test
     '''
     db = MYSQL_DB(MYSQL_DB_DATA1)
     db.execute(sql)
