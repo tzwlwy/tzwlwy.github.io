@@ -1,0 +1,26 @@
+---
+layout: post
+category: "python"
+title:  "装饰器"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - python
+---
+**第三次看装饰器了！！！！**
+```python
+def newdecorator(i):
+    def decorator(func):
+        def restructure(x):
+            func(x)
+            print('this is decorator %s%s'%(i,x))
+        return restructure
+    return decorator
+
+@newdecorator('?')
+def target(x):
+    print('this is target %s'%x)
+
+target('!')
+
+target(x) == newdecorator(i)(target)(x) == decorator(target)(x) == reconstructure(x)
+```
