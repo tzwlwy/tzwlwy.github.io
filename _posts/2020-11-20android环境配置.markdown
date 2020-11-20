@@ -1,0 +1,12 @@
+---
+layout: post
+category: "android"
+title:  "android环境配置"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - android
+---
+
+```python
+https://blog.csdn.net/qq_39143308/article/details/107954307
+```

@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="test">
+    <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="20200825">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-04-08-iostat.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-08-iostat.markdown" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +45,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\testing\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projectcode\github\tzwlwy.github.io\_posts" />
       <recent name="F:\tzwlwy.github.io\_posts" />
       <recent name="F:\tzwlwy.github.io\img\in-post\xingneng" />
       <recent name="D:\git_hub\tzwlwy.github.io\_posts" />
       <recent name="D:\git_hub\tzwlwy.github.io\img\in-post\python" />
-      <recent name="D:\git_hub\tzwlwy.github.io" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,6 +102,12 @@
       <workItem from="1568621725041" duration="1015000" />
       <workItem from="1578635991947" duration="1259000" />
       <workItem from="1586853260487" duration="1791000" />
+      <workItem from="1597913440460" duration="1491000" />
+      <workItem from="1597976137511" duration="4310000" />
+      <workItem from="1598339920677" duration="129000" />
+      <workItem from="1599446961445" duration="608000" />
+      <workItem from="1604388149460" duration="669000" />
+      <workItem from="1605861046442" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1552896677872</created>
@@ -251,7 +256,35 @@
       <option name="project" value="LOCAL" />
       <updated>1586853334994</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="20200820">
+      <created>1597914355338</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1597914355338</updated>
+    </task>
+    <task id="LOCAL-00023" summary="20200820">
+      <created>1597991921214</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597991921214</updated>
+    </task>
+    <task id="LOCAL-00024" summary="20200821">
+      <created>1597993823989</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1597993823989</updated>
+    </task>
+    <task id="LOCAL-00025" summary="20200825">
+      <created>1598340026879</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1598340026879</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +300,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -283,12 +317,23 @@
     <MESSAGE value="面试复习" />
     <MESSAGE value="增加python奇技淫巧" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="20200820" />
+    <MESSAGE value="20200821" />
+    <MESSAGE value="20200825" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200825" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586853336990">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1604388190446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586853336990" />
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598340028295">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598340028295" />
+    <state x="468" y="146" width="600" height="532" key="find.popup" timestamp="1599446968166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="468" y="146" width="600" height="532" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1599446968166" />
   </component>
 </project>
