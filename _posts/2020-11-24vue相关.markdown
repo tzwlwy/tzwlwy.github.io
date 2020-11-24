@@ -1,0 +1,123 @@
+---
+layout: post
+category: "VUE"
+title:  "VUE-dialog"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - VUE
+---
+看了一遍VUE的视频，看完就忘，中间也眼高手低没有跟着写，一段时间后自己动手毫无头绪，决定做做笔记
+
+PS: 所有模块需要按需导入
+
+添加dialog对话框
+<pre><code>
+内容主体：
+```python
+    <!-- 添加用户的对话框 -->
+     <div>
+       <el-button class="filter-item" type="primary" @click="addDialogVisible = true">添加用户</el-button>
+    </div> 
+    <el-dialog title="添加用户" :visible.sync="addDialogVisible" width="50%" @close="addDialogClosed">
+      <!-- 内容主体 -->
+      <el-form
+        ref="addUserFormRef"
+        :model="addUserForm"
+        :rules="addUserFormRules"
+        label-width="100px"
+      >
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="addUserForm.username" />
+        </el-form-item>
+        <el-form-item label="密码" prop="password">
+          <el-input v-model="addUserForm.password" />
+        </el-form-item>
+        <el-form-item label="邮箱" prop="email">
+          <el-input v-model="addUserForm.email" />
+        </el-form-item>
+        <el-form-item label="手机" prop="mobile">
+          <el-input v-model="addUserForm.mobile" />
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="addDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="addUser">确 定</el-button>
+      </span>
+    </el-dialog>
+```
+如上所见
+首先定义 addDialogVisible =True 展示dialog对话框
+所以要 在 return 里声明 
+```python       
+addDialogVisible: false,
+```
+定义了addDialogClosed 方法
+所以要编写addDialogClosed 方法，在methods里面声明
+```python       
+    addDialogClosed () {
+      this.$refs.addUserFormRef.resetFields()
+    },
+```
+声明了表单验证规则addUserFormRef，所以在return里面声明
+```python       
+      // 用户添加表单验证规则
+      addUserFormRules: {
+        username: [
+          { required: true, message: '请输入用户名', trigger: 'blur' },
+          {
+            min: 2,
+            max: 10,
+            message: '用户名的长度在2～10个字',
+            trigger: 'blur'
+          }
+        ],
+        password: [
+          { required: true, message: '请输入用户密码', trigger: 'blur' },
+          {
+            min: 6,
+            max: 18,
+            message: '用户密码的长度在6～18个字',
+            trigger: 'blur'
+          }
+        ],
+        email: [
+          { required: true, message: '请输入邮箱', trigger: 'blur' },
+          { validator: checkEmail, trigger: 'blur' }
+        ],
+        mobile: [
+          { required: true, message: '请输入手机号码', trigger: 'blur' },
+          { validator: checkMobile, trigger: 'blur' }
+        ]
+      },
+```
+:model="addUserForm" 所以return 里面声明表单
+```python 
+      // 用户添加
+      addUserForm: {
+        username: '',
+        password: '',
+        email: '',
+        mobile: ''
+      },
+ 
+```
+
+ref="addUserFormRef"
+表单重置功能
+
+```python 
+      // 用户添加
+      addUserForm: {
+        username: '',
+        password: '',
+        email: '',
+        mobile: ''
+      },
+ 
+```        
+        
+
+
+
+
+</code></pre>
