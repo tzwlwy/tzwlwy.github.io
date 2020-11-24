@@ -13,7 +13,6 @@ PS: 所有模块需要按需导入
 添加dialog对话框
 <pre><code>
 内容主体：
-```python
     <!-- 添加用户的对话框 -->
      <div>
        <el-button class="filter-item" type="primary" @click="addDialogVisible = true">添加用户</el-button>
@@ -44,22 +43,22 @@ PS: 所有模块需要按需导入
         <el-button type="primary" @click="addUser">确 定</el-button>
       </span>
     </el-dialog>
-```
+</code></pre>
 如上所见
 首先定义 addDialogVisible =True 展示dialog对话框
 所以要 在 return 里声明 
-```python       
+<pre><code>      
 addDialogVisible: false,
-```
+</code></pre>
 定义了addDialogClosed 方法
 所以要编写addDialogClosed 方法，在methods里面声明
-```python       
+<pre><code>      
     addDialogClosed () {
       this.$refs.addUserFormRef.resetFields()
     },
-```
+</code></pre>
 声明了表单验证规则addUserFormRef，所以在return里面声明
-```python       
+<pre><code>      
       // 用户添加表单验证规则
       addUserFormRules: {
         username: [
@@ -89,9 +88,9 @@ addDialogVisible: false,
           { validator: checkMobile, trigger: 'blur' }
         ]
       },
-```
+</code></pre>
 :model="addUserForm" 所以return 里面声明表单
-```python 
+<pre><code>
       // 用户添加
       addUserForm: {
         username: '',
@@ -100,12 +99,12 @@ addDialogVisible: false,
         mobile: ''
       },
  
-```
+</code></pre>
 
 ref="addUserFormRef"
 表单重置功能
 
-```python 
+<pre><code>
       // 用户添加
       addUserForm: {
         username: '',
@@ -113,11 +112,11 @@ ref="addUserFormRef"
         email: '',
         mobile: ''
       },
- 
-```        
+
+</code></pre>        
         
 
 
 
 
-</code></pre>
+
