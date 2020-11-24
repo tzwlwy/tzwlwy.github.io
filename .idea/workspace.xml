@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="20200825">
+    <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="Vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +108,8 @@
       <workItem from="1599446961445" duration="608000" />
       <workItem from="1604388149460" duration="669000" />
       <workItem from="1605861046442" duration="66000" />
+      <workItem from="1605861710306" duration="599000" />
+      <workItem from="1606198358636" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1552896677872</created>
@@ -284,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598340026879</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Vue">
+      <created>1606206605164</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1606206605164</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,20 +329,26 @@
     <MESSAGE value="20200820" />
     <MESSAGE value="20200821" />
     <MESSAGE value="20200825" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200825" />
+    <MESSAGE value="Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1604388190446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598340028295">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606206699700">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1606206699700" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598340028295" />
     <state x="468" y="146" width="600" height="532" key="find.popup" timestamp="1599446968166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="468" y="146" width="600" height="532" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1599446968166" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606198531046">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1606198531046" />
   </component>
 </project>
