@@ -30,6 +30,13 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -45,17 +52,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\testing\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/in-post/python_day" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projectcode\github\tzwlwy.github.io\img\in-post\python_day" />
       <recent name="D:\Projectcode\github\tzwlwy.github.io\_posts" />
       <recent name="F:\tzwlwy.github.io\_posts" />
       <recent name="F:\tzwlwy.github.io\img\in-post\xingneng" />
       <recent name="D:\git_hub\tzwlwy.github.io\_posts" />
-      <recent name="D:\git_hub\tzwlwy.github.io\img\in-post\python" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,7 +116,10 @@
       <workItem from="1604388149460" duration="669000" />
       <workItem from="1605861046442" duration="66000" />
       <workItem from="1605861710306" duration="599000" />
-      <workItem from="1606198358636" duration="3532000" />
+      <workItem from="1606198358636" duration="5075000" />
+      <workItem from="1606270507817" duration="599000" />
+      <workItem from="1606441775695" duration="599000" />
+      <workItem from="1608124122679" duration="2230000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1552896677872</created>
@@ -293,7 +303,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606206605164</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Vue">
+      <created>1606206934911</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1606206934911</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Vue">
+      <created>1606207158198</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1606207158198</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,10 +361,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606206699700">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606207160240">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1606206699700" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1606207160240" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598340028295" />
     <state x="468" y="146" width="600" height="532" key="find.popup" timestamp="1599446968166">
       <screen x="0" y="0" width="1536" height="824" />
