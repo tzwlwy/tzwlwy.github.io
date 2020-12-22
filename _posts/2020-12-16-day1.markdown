@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "python学习笔记"
-title:  "day1-基础数据类型"
+title:  "day 1-7 基础数据类型"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - PYTHON
@@ -12,13 +12,25 @@ tags:
 变量全大写 代表常量 
 TNAME='这是常量'
 
-格式化输出      
-```python        
+     
+```python  
+#格式化输出       
 print('我 今年  %s 岁' %11)
 print('我 今年  {s} 岁'.format(s=11))
+
+#join用法
+str2 = "-"
+seq = ("a", "b", "c")
+print(str2.join(seq))  # a-b-c
+#编码问题
+#decode相当于解码，就是相当于一个人脱了衣服（无论穿什么，脱了都一样），转换成unicode
+#但是encode编码，相当于一个人可以穿不同的衣服（穿啥由你决定~）unicode 转换为其他编码
+
 ```
 </code></pre>  
 ![img](/img/in-post/python_day/编码历史.jpg)
-
-
+dict复习
+![img](/img/in-post/python_day/dict.jpg)
+list复习
+![img](/img/in-post/python_day/list.jpg)
 
