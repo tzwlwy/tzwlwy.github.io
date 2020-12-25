@@ -1,0 +1,45 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 10  局部变量与全局变量"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+<pre><code>
+看懂下面原理就懂了   
+```python  
+'''
+局部变量与全局变量
+'''
+
+a=1
+def inner():
+    # print(a)  #报错，因为函数内部使用了a这个变量，所以默认a为局部变量，那就不取全局变量了，那么就会找不到，那么就报错了
+    a=4
+    #global  a  报错，因为已经有局部变量a了，再次使用global，那么函数无法判断使用全部还是局部
+    print(a)
+    a+=1
+    print(a)
+    def inner3():
+        nonlocal a   #影响最近的函数的局部变量
+        a+=1
+        print("nonlocal")
+        print(a)
+
+    def inner2():
+        global a
+        a+=1
+        print(a)
+
+    inner2()
+    inner3()
+    print("全局变量a"+str(a))
+
+inner()
+print(a)
+
+```
+</code></pre>  
+
