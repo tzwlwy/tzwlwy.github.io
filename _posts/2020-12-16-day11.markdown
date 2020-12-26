@@ -1,0 +1,53 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 11  一些思路"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+<pre><code>
+问题一:给一个指定列表，返回他奇数项的值作为新的列表展示
+思路：第一感觉是进行一个for循环去调用，后来发现那并不优雅，使用切片的小功能就能实现
+```python 
+def func(): 
+    return s[1::2]
+```
+
+问题二:判断用户给予的字符串，列表，元祖等的长度是否大于5
+思路：第一感觉是使用len函数，然后判断，其实可以直接return的,就很优雅
+```python 
+def func(s):
+  return len(s)>5
+```
+
+问题三：写函数，如果给与的数据长度大于2，那么返回前两个数据，不然返回原值
+思路：第一反应是通过判断他的长度，然后if条件判断，实际可以使用他的切片功能
+```python 
+def func(s):
+   return s[:2]
+ ```
+ 
+ 问题四，统计一个字符串里数字，字母，空格及其他的数量
+ 思路：刚开始无从下手，因为忘记可以通过判断他的类型来进行统计
+ 按照正常的逻辑，我会声明四个变量，然后直接return，但是这样不够友好，建议先声明一个字典，然后返回，代码如下   
+```python 
+def func(s):
+  dic={"num":0,"space":0,"alp":0,"other":0}
+  for i in s :
+    # if i.isalnum():
+    #     print("是字母数字")
+    if  i.isdigit():
+        dic['num']+=1
+    elif i.isspace():
+        dic['space']+=1
+    elif i.isalpha():
+        dic['alp'] += 1
+    else:
+        dic['other'] += 1
+  return  dic
+ ```
+
+</code></pre>  
+
