@@ -41,5 +41,15 @@ inner()
 print(a)
 
 ```
+```python  
+def bibao():
+    a='1'
+    def innner():
+        print("闭包的作用是是的部分变量的使用周期变长，如上面的a")
+    return innner
+
+s=bibao()
+s()
+```
 </code></pre>  
 
