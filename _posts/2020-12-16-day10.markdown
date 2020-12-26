@@ -41,6 +41,7 @@ inner()
 print(a)
 
 ```
+闭包的使用
 ```python  
 def bibao():
     a='1'
