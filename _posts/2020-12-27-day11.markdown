@@ -1,0 +1,154 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 11 装饰器"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+<pre><code>
+我发誓真的是我最后一次写装饰器了。。。。
+装饰器作用：不修改原有方法，在原有方法的基础上编写前后逻辑
+好处：1、不修改原有代码，避免影响之前的代码
+
+
+首先先来一个最简答的装饰器，其实装饰器就是简单的利用了闭包的原理
+```python 
+from functools import wraps
+
+def wrapper(func):
+    print("增加装饰器前面逻辑")
+
+    @wraps(func)
+    def inner(*args, **kwargs):
+        res = func(*args, **kwargs)
+        print("增加装饰器后面逻辑")
+        return res
+
+    return inner
+
+@wrapper
+def func():
+    '''
+    这是被装饰的函数
+    '''
+    print("函数运行内容")
+    return "程序运行结束了"
+f = func()
+print(func.__name__)
+print(func.__doc__)
+```
+
+然后需要对装饰器本身进行加参数，其实就是在外层再套一个函数
+```python 
+from functools import wraps
+
+def wrapper_outer(*ar, **kws):
+    def wrapper(func):
+        @wraps(func)
+        def inner(*args, **kwargs):
+            print("增加装饰器前面逻辑")
+            if ar or kws:
+                print("需要对装饰器参数的一些处理")
+                print(ar, kws)
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑")
+                return res
+            else:
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑")
+                return res
+
+        return inner
+
+    return wrapper
+
+
+@wrapper_outer(1, 2, 3)
+def func():
+    '''
+    这是被装饰的函数
+    '''
+    print("函数运行内容")
+    return "程序运行结束了"
+
+
+f = func()
+print(func.__name__)
+print(func.__doc__)
+```
+最后再讲一下多个装饰器装饰同一个函数时，是先调用下面的装饰器，也就是下面例子的wrapper_outer1
+```python 
+from functools import wraps
+
+
+def wrapper_outer1(*ar, **kws):
+    def wrapper(func):
+        @wraps(func)
+        def inner(*args, **kwargs):
+            print("增加装饰器前面逻辑 wrapper_outer1")
+            if ar or kws:
+                print("需要对装饰器参数的一些处理")
+                print(ar, kws)
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑 wrapper_outer1")
+                return res
+            else:
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑 wrapper_outer1")
+                return res
+
+        return inner
+
+    return wrapper
+
+def wrapper_outer2(*ar, **kws):
+    def wrapper(func):
+        @wraps(func)
+        def inner(*args, **kwargs):
+            print("增加装饰器前面逻辑 wrapper_outer2")
+            if ar or kws:
+                print("需要对装饰器参数的一些处理")
+                print(ar, kws)
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑 wrapper_outer2")
+                return res
+            else:
+                res = func(*args, **kwargs)
+                print("增加装饰器后面逻辑 wrapper_outer2")
+                return res
+
+        return inner
+
+    return wrapper
+
+@wrapper_outer2(1, 2, 3)
+@wrapper_outer1(1, 2, 3)
+def func():
+    '''
+    这是被装饰的函数
+    '''
+    print("函数运行内容")
+    return "程序运行结束了"
+
+
+f = func()
+print(func.__name__)
+print(func.__doc__)
+
+```
+最后只要记住上面运行结果就行，本质可以自己一步步调用发现
+增加装饰器前面逻辑 wrapper_outer2
+需要对装饰器参数的一些处理
+(1, 2, 3) {}
+增加装饰器前面逻辑 wrapper_outer1
+需要对装饰器参数的一些处理
+(1, 2, 3) {}
+函数运行内容
+增加装饰器后面逻辑 wrapper_outer1
+增加装饰器后面逻辑 wrapper_outer2
+
+至此，装饰器应该不用再看第五遍了
+</code></pre>  
+
