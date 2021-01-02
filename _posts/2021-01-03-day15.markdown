@@ -21,7 +21,7 @@ print(list(g1))
 print("g2结果如下:")
 print(list(g2))
 ```
-
+<pre><code>
 答案: 
 g1结果如下:
 [0, 1, 2, 3, 4]
@@ -32,5 +32,5 @@ g2结果如下:
 运行g2=(i for i in g1) 时，可以理解为值仍然在g1里
 当运行print(list(g1))时，一个个从g1里面取，g1 从g里面取，所以g1=[0, 1, 2, 3, 4]
 在运行print(list(g2))时，数据已经被取完，所以为空
-
+</code></pre>
 
