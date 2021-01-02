@@ -34,3 +34,65 @@ g2结果如下:
 在运行print(list(g2))时，数据已经被取完，所以为空
 </code></pre>
 
+拓展可得
+```python 
+def demo():
+    for i in range(4):
+        yield i
+
+g=demo()
+g1=(i for i in g)
+g2=(i for i in g1)
+print("g结果如下:")
+print(list(g))
+print("g1结果如下:")
+print(list(g1))
+print("g2结果如下:")
+print(list(g2))
+
+# g结果如下:
+# [0, 1, 2, 3]
+# g1结果如下:
+# []
+# g2结果如下:
+# []
+```
+然后是第二个面试题,输出结果是什么
+ ```python 
+ def add(a,b):
+    return a+b
+
+def  test():
+    for i in range(4):
+        yield i
+
+g=test()
+for n in [1,10]:
+    g=(add(n,i) for i in g)
+print(list(g))
+ ```
+<pre><code>
+看到这个膨胀的很，不就是生成器加推导式么，咦，应该会报错吧，g有4个数，n只有2个数，结果是我年轻了。。。
+首先进行拆分
+for n in [1,10]:
+    g=(add(n,i) for i in g)
+同等于
+n=1
+g=(add(n,i) for i in g)
+n=10
+g=(add(n,i) for i in g)
+也就是同等于
+g=(add(n,i) for i in (add(n,i) for i in g)) 
+#注意这里n全都为10，因为是生成器，所以n=1时没执行，在执行print(list(g)) 时n=10 
+g=(add(10,i) for i in (add(10,i) for i in test())) 
+
+g=(add(10,i) for i in (10,11,12,13) 
+g=(20,21,22,23)
+print(list(g)) #[20, 21, 22, 23]
+</code></pre>
+
+总结：
+<pre><code>
+生成器是惰性的，所以要看执行时往上调，而不是想当然的理解拆分为
+g=(add(10,i) for i in (add(1,i) for i in test())) 
+</code></pre>
