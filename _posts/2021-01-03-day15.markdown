@@ -1,0 +1,36 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 15 生成器面试题"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+学习了生成器后自信满满，结果被上了一课，我们先来看题，第一题相对简单,但是也错了
+```python 
+def demo():
+    for i in range(4):
+        yield i
+
+g=demo()
+g1=(i for i in g)
+g2=(i for i in g1)
+print("g1结果如下:")
+print(list(g1))
+print("g2结果如下:")
+print(list(g2))
+```
+
+答案: 
+g1结果如下:
+[0, 1, 2, 3, 4]
+g2结果如下:
+[]
+跟我预想的不太一样，我预想是，g1=[] ,g2=[0, 1, 2, 3, 4],结果事实刚好相反
+因为生成器没运行的时候值是不取出来的，所以g1=(i for i in g)时，可以理解为值仍然在g里，
+运行g2=(i for i in g1) 时，可以理解为值仍然在g1里
+当运行print(list(g1))时，一个个从g1里面取，g1 从g里面取，所以g1=[0, 1, 2, 3, 4]
+在运行print(list(g2))时，数据已经被取完，所以为空
+
+
