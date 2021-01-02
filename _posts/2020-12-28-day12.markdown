@@ -1,0 +1,114 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 12 迭代器"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+迭代器相对list而言更省内存，原理是迭代器生成时只是创建一个可迭代数据对象，占据内存极小，需要的时候才取
+计算庞大数据量的时候，处理一条返回一条
+下面代码展示了一个生成器及使用一个装饰器去简化生成器开始需要调用的next方法
+简化前
+```python 
+def generator1():
+    sum = 0
+    count = 0
+    avg = 0
+    while True:
+        num = yield avg
+        sum += num
+        count += 1
+        avg = sum // count
+
+
+g = generator1()
+g.__next__()
+avg1 = g.send(10)
+print(avg1)
+avg2 = g.send(20)
+print(avg2)
+avg3 = g.send(210)
+print(avg3)
+```
+
+简化后，并且可以利用装饰器的原理给函数前后处理逻辑且不修改原函数
+```python 
+def swrap1(func):
+    def inner(*args,**kwargs):
+        g=func(*args, **kwargs)
+        next(g)
+        return g
+    return inner
+
+@swrap1
+def generator1():
+    sum = 0
+    count = 0
+    avg = 0
+    while True:
+        num = yield avg
+        sum += num
+        count += 1
+        avg = sum // count
+
+
+g = generator1()
+avg1 = g.send(10)
+print(avg1)
+avg2 = g.send(20)
+print(avg2)
+avg3 = g.send(210)
+print(avg3)
+```
+
+
+python3 yield from
+```python 
+def generator2():
+    a='1234567'
+    b='sdfghjk'
+    yield from a
+    yield from b
+    # for i in a:
+    #     yield  i
+    # for i  in b:
+    #     yield  i
+
+c=generator2()
+for i in c:
+    print(i)
+```
+
+推导式，注意[]是列表推导式，()生成的是生成器，{}为列表或集合推导式
+```python 
+c=(i*i for i in range(5,10)) #生成器推导式
+print(next(c))
+print(c.__next__())
+
+a=[i for i in range(10) if i%3 ==0] #列表推导式
+print(a)
+a=(i for i in range(10) if i%3 ==0) #生成器推导式
+print(a)
+
+#字典推导式
+#需求key，value互换
+names={"k1":55,"k2":66}
+names_resever={names[k]:k for k in names}
+print(names_resever)
+
+#集合推导式
+names={i**2 for i in [1,-1,2,-2,3]}
+print(names)
+
+```
+多个列表且含条件推导式，注意需要返回值name，写lst的话结果就不一样了
+需求：返回names列表中 b的总数为2 的值至新列表中
+```python 
+names=[['aaa','abb','bbsss','bbkaka'],['sssa','nhjb','kkbb']]
+a=[name for lst in names for name in lst if name.count('b')==2]
+for i in a:
+    print(i)
+```
+
