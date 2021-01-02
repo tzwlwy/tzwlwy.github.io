@@ -1,11 +1,13 @@
 ---
 layout: post
 category: "python学习笔记"
-title:  "day 12 迭代器"
+title:  "day 12-14 要学会写生成器啊"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - PYTHON
 ---
+
+
 
 迭代器相对list而言更省内存，原理是迭代器生成时只是创建一个可迭代数据对象，占据内存极小，需要的时候才取
 计算庞大数据量的时候，处理一条返回一条
