@@ -1,0 +1,54 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 15 内置函数"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+部分内置函数讲解
+locals()
+```python 
+global b
+b=4
+def runoob(arg):  # 两个局部变量：arg、z
+    z = 1
+    a=4
+    print(locals())
+    print(globals())
+
+def tets():
+    print("aaaa")
+
+runoob(4)
+print((dir(1))) #dir() 查看对象的所有方法
+print((hash(1))) #hash() 每一次运行过程，同一个对象hash值永远唯一，常用来对比数据是否一致
+
+
+#输出
+# locals():{'a': 4, 'z': 1, 'arg': 4}
+#globals():
+# {
+#     '__name__': '__main__',
+#     '__doc__': None,
+#     '__package__': None,
+#     '__loader__': < _frozen_importlib_external.SourceFileLoaderobjectat0x000001F2B90EB390 >,
+# '__spec__': None,
+# '__annotations__': {
+# 
+# },
+# '__builtins__': < module
+# 'builtins'(built - in) >,
+# '__file__': 'D: /Projectcode/gitlab/pengyipeng/学习笔记/yttyy.py',
+# '__cached__': None,
+# 'b': 4,
+# 'runoob': < functionrunoobat0x000001F2B8FE2E18 >,
+#             'tets': < functiontetsat0x000001F2B91C0EA0 >
+# }
+
+
+```
+<pre><code>
+可见 locals() 函数输出的是函数内部所有局部变量的值
+globals() 输出所有的函数及变量值
+</code></pre>
