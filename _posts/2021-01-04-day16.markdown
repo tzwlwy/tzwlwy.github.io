@@ -1,0 +1,38 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "day 15 内置函数"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+exec,eval 其实都可以把字符串当成python代码执行，但是eval有返回值，exec没有返回值    
+```python 
+test_exec=exec('1+2+3+4')
+test_eval=eval('1+2+3+4')
+print(test_exec,test_eval) #None 10
+
+exec("print(1+2+3+4)") #10
+eval("print(1+2+3+4)") #10
+
+```
+注意！！！默认参数必须指向不变对象,
+不可变（immutable）：int、字符串(string)、float、（数值型number）、元组（tuple)
+可变（mutable）：字典型(dictionary)、列表型(list)
+当默认参数为list等可变时，会出现以下情况
+```python 
+def test_fun(val,list2=[]):
+    list2.append(val)
+    return list2
+
+list1=test_fun('a')
+list2=test_fun('b',[])
+list3=test_fun('c')
+print(list1) #['a', 'c']
+print(list2) #['b']
+print(list3) #['a', 'c']
+```
+<pre><code>
+可见 locals() 函数输出的是函数内部所有局部变量的值
+globals() 输出所有的函数及变量值
+</code></pre>
