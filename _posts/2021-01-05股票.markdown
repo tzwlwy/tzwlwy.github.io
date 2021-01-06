@@ -1,0 +1,22 @@
+---
+layout: post
+category: "股票每日总结"
+title:  "2021.1.5"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - 股票
+---
+
+
+**2021.1.5**
+2021年的第二个交易日，这个月目前亏损2000，主要是买了招商银行，国家发布了房地产相关的规定，
+招行需要调整，大跌5个多点，今日补仓了，目前亏损3个多点，错过了伊利，看到死叉冲天可以买入，勿怕
+
+**收盘**：
+格力截止今天盈利10个点了，大盘涨得我有点慌，招行小亏，有点怕大盘崩盘
+
+![img](/img/in-post/python_day/编码历史.jpg)
+dict复习
+![img](/img/in-post/python_day/dict.jpg)
+list复习
+![img](/img/in-post/python_day/list.jpg)
