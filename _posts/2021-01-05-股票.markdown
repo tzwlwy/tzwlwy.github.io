@@ -13,8 +13,8 @@ tags:
 ### 收盘：
 格力截止今天盈利10个点了，大盘涨得我有点慌，招行小亏，有点怕大盘崩盘
 
-![img](/img/in-post/re/1.jpg)
-2222
-<div style="align: left">
- <img src="/img/in-post/python/locust1.jpg"/>
-</div> 
+![img](/img/gupiao/20200105/1.jpg)
+![img](/img/gupiao/20200105/2.jpg)
+![img](/img/gupiao/20200105/3.jpg)
+![img](/img/gupiao/20200105/4.jpg)
+![img](/img/gupiao/20200105/5.jpg)
