@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "python学习笔记"
-title:  "day 11  一些思路"
+title:  "day 11 一些思路"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - PYTHON

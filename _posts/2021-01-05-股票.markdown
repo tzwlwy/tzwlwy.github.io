@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "股票每日总结"
-title:  "2021.1.5"
+title:  "2021.1.5总结"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - 股票
