@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="python  day 15 生成器面试题">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2021-01-05-股票.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-01-05-股票.markdown" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,14 +128,7 @@
       <workItem from="1609596921568" duration="6228000" />
       <workItem from="1609656935974" duration="3848000" />
       <workItem from="1609827795899" duration="2461000" />
-      <workItem from="1609944859044" duration="720000" />
-    </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1552896677872</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1552896677872</updated>
+      <workItem from="1609944859044" duration="758000" />
     </task>
     <task id="LOCAL-00002" summary="1">
       <created>1552897598328</created>
@@ -474,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609945445187</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="python  day 15 生成器面试题">
+      <created>1609945593068</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1609945593069</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,10 +523,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609945446354">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609945596519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1609945446354" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1609945596519" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609661524925" />
     <state x="464" y="166" width="600" height="532" key="find.popup" timestamp="1609945123410">
       <screen x="0" y="0" width="1536" height="824" />

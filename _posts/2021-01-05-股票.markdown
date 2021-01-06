@@ -15,8 +15,3 @@ tags:
 #收盘：
    格力截止今天盈利10个点了，大盘涨得我有点慌，招行小亏，有点怕大盘崩盘
 
-![img](/img/in-post/python_day/编码历史.jpg)
-dict复习
-![img](/img/in-post/python_day/dict.jpg)
-list复习
-![img](/img/in-post/python_day/list.jpg)
