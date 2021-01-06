@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "python学习笔记"
-title:  "day 15 内置函数"
+title:  "day 15 内置函数一"
 header-img: "img/in-post/post-bg-unix-linux.jpg"
 tags:
     - PYTHON
