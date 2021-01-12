@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="249af539-2950-4a53-92af-eab6db85c35e" name="Default" comment="python 222">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-01-05-股票.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-01-05-股票.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/gupiao/fruit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-01-04-day16.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-01-04-day16.markdown" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,15 +53,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\testing\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/gupiao/20200106" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projectcode\github\tzwlwy.github.io\img\gupiao\20200106" />
       <recent name="D:\Projectcode\github\tzwlwy.github.io\_posts" />
       <recent name="D:\Projectcode\github\tzwlwy.github.io\img\gupiao" />
+      <recent name="D:\Projectcode\github\tzwlwy.github.io\img\gupiao\20200106" />
       <recent name="D:\Projectcode\github\tzwlwy.github.io\img\gupiao\20200105" />
       <recent name="D:\Projectcode\github\tzwlwy.github.io\img\in-post\python_day" />
     </key>
@@ -130,35 +129,9 @@
       <workItem from="1609596921568" duration="6228000" />
       <workItem from="1609656935974" duration="3848000" />
       <workItem from="1609827795899" duration="2461000" />
-      <workItem from="1609944859044" duration="5004000" />
-    </task>
-    <task id="LOCAL-00008" summary="增加python奇技淫巧">
-      <created>1578636659277</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1578636659277</updated>
-    </task>
-    <task id="LOCAL-00009" summary="面试复习">
-      <created>1584330245063</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1584330245063</updated>
-    </task>
-    <task id="LOCAL-00010" summary="增加python奇技淫巧">
-      <created>1584344831388</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1584344831388</updated>
-    </task>
-    <task id="LOCAL-00011" summary="增加python奇技淫巧">
-      <created>1584509872921</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1584509872921</updated>
+      <workItem from="1609944859044" duration="6932000" />
+      <workItem from="1610091782227" duration="621000" />
+      <workItem from="1610150726975" duration="2653000" />
     </task>
     <task id="LOCAL-00012" summary="增加python奇技淫巧">
       <created>1584540969964</created>
@@ -475,7 +448,35 @@
       <option name="project" value="LOCAL" />
       <updated>1609946922320</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="python 222">
+      <created>1609951216994</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1609951216994</updated>
+    </task>
+    <task id="LOCAL-00058" summary="python 222">
+      <created>1609951275391</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1609951275391</updated>
+    </task>
+    <task id="LOCAL-00059" summary="python 222">
+      <created>1609951299196</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1609951299196</updated>
+    </task>
+    <task id="LOCAL-00060" summary="python 222">
+      <created>1610440645237</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1610440645238</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,10 +527,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609946923655">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610440646702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1609946923655" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1610440646702" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609661524925" />
     <state x="464" y="166" width="600" height="556" key="find.popup" timestamp="1609946881144">
       <screen x="0" y="0" width="1536" height="824" />

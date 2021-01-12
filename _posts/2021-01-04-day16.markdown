@@ -17,9 +17,11 @@ eval("print(1+2+3+4)") #10
 
 ```
 注意！！！默认参数必须指向不变对象,
---不可变（immutable）：int、字符串(string)、float、（数值型number）、元组（tuple)
+### 不可变（immutable）：
+int、字符串(string)、float、（数值型number）、元组（tuple)
 
---可变（mutable）：字典型(dictionary)、列表型(list)
+### 可变（mutable）：
+字典型(dictionary)、列表型(list)
 当默认参数为list等可变时，会出现以下情况
 ```python 
 def test_fun(val,list2=[]):

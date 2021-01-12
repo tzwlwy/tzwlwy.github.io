@@ -1,0 +1,15 @@
+---
+layout: post
+category: "股票每日总结"
+title:  "2021.1.7股票回顾"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - 股票
+---
+
+
+### 2021.1.7
+今天不错,继续持有
+### 收盘及次日感想：
+暂时未有太多想法，先持有
+
