@@ -1,0 +1,36 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "一些面试题"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+<pre><code>
+# 面试题一
+# 根据字典的value进行取最大值的key
+dic={"k1":10,"k2":100,"k3":20}
+dic_sort=max(dic,key=lambda key: dic[key])
+print(dic_sort)
+
+# 面试题二
+#内置函数filter的用法,返回func为True的迭代器
+res=filter(lambda x:x%2==0,[1,2,3,4,5,6])
+print(list(res))
+
+# 面试题三
+#内置函数map的用法,把后面可迭代的数据一个个推送到函数中，生成新的迭代器
+res=map(lambda x:x*2 ,[1,2,3,4,5,6])
+print(list(res))
+
+# 面试题四，以下输出的结果是什么
+def mm():
+    return [lambda x:i*x for i in range(4)]
+
+def mm1():
+    return (lambda x:i*x for i in range(4))
+
+print([m(2) for m in mm()])
+print([m(2) for m in mm1()])
+
+</code></pre>
