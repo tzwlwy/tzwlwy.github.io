@@ -131,14 +131,16 @@
       <workItem from="1609944859044" duration="6932000" />
       <workItem from="1610091782227" duration="621000" />
       <workItem from="1610150726975" duration="6641000" />
-      <workItem from="1610540398584" duration="389000" />
-    </task>
-    <task id="LOCAL-00013" summary="增加python奇技淫巧">
-      <created>1584857376778</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1584857376779</updated>
+      <workItem from="1610540398584" duration="1739000" />
+      <workItem from="1610933734634" duration="584000" />
+      <workItem from="1610947196850" duration="599000" />
+      <workItem from="1610948819672" duration="599000" />
+      <workItem from="1611044839442" duration="750000" />
+      <workItem from="1611104111325" duration="863000" />
+      <workItem from="1611109492447" duration="1228000" />
+      <workItem from="1612168801794" duration="628000" />
+      <workItem from="1614306222871" duration="204000" />
+      <workItem from="1614321443727" duration="89000" />
     </task>
     <task id="LOCAL-00014" summary="增加python奇技淫巧">
       <created>1584857582081</created>
@@ -476,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610440715349</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="python 222">
+      <created>1610540796697</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1610540796698</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,20 +532,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="python 222" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1604388190446">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610540798092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1604388190446" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610440716692">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1610440716692" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1610540798092" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609661524925" />
-    <state x="464" y="166" width="600" height="556" key="find.popup" timestamp="1609946881144">
+    <state x="464" y="166" width="600" height="532" key="find.popup" timestamp="1614306248222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="464" y="166" width="600" height="556" key="find.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1609946881144" />
-    <state x="464" y="166" width="600" height="532" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1609647345481" />
+    <state x="464" y="166" width="600" height="556" key="find.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612168812872" />
+    <state x="2403" y="173" width="625" height="581" key="find.popup/0.0.1536.824/1920.0.1600.860@1920.0.1600.860" timestamp="1611104120505" />
+    <state x="464" y="166" width="600" height="532" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1614306248222" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606198531046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

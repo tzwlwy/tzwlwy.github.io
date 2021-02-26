@@ -1,0 +1,112 @@
+---
+layout: post
+category: "python学习笔记"
+title:  "python 反射"
+header-img: "img/in-post/post-bg-unix-linux.jpg"
+tags:
+    - PYTHON
+---
+
+```python 
+#coding:utf-8
+'''
+#反射的基本用法：
+
+hasattr 判断一个方法是否存在于实例中
+getattr 指定一个方法名字，获取该方法的内存地址，加"()"括号并可执行
+'''
+import sys
+class WebServer(object):
+    def __init__(self,host,port):
+        self.host = host
+        self.port = port
+
+    def start(self):
+        print("Server is starting...")
+
+    def stop(self):
+        print("Server is stopping")
+
+    def restart(self):
+        self.stop()
+        self.start()
+
+#例子：获取用户输入的第一个内容，调用相应的方法
+
+if __name__ == "__main__":
+    #sys.argv[1]表示：接收用户输入的第一个参数
+
+    #方法一：这种方法可以实现，但是很low()，不建议使用
+    # server = WebServer("127.0.0.1",3306)
+    # cmd_server = {"start":server.start,"stop":server.stop,"restart":server.restart}
+    # if sys.argv[1] in cmd_server:
+    #     cmd_server[sys.argv[1]]()
+
+    # #方法二：但是这种方法有问题，怎么把用户输入的字符串名字调用对应的方法呢？
+    # cmd_server = sys.argv[1]
+    # if cmd_server in WebServer.__dict__:
+    #     print(cmd_server)
+    #     WebServer("127.0.0.1",3306).cmd_server  #cmd_server为用户输入的字符串名字，但是这样调用显然不行
+
+    #方法三：利用hasattr和getattr方法判断方法是否存在对象中并获取对象中方法的内存地址
+    server = WebServer("127.0.0.1",3306)
+    if hasattr(server,sys.argv[1]):         #hasattr；判断类中是否包含某一个方法和属性
+        func = getattr(server,sys.argv[1])  #getattr；获取server.start内存地址
+        func()'''
+setattr绑定一个函数到实例
+
+说明：如何把一个类之外的函数，绑定到实例里面呢？
+'''
+import sys
+class WebServer(object):
+    def __init__(self,host,port):
+        self.host = host
+        self.port = port
+
+    def start(self):
+        print("Server is starting...")
+
+    def stop(self):
+        print("Server is stopping")
+
+    def restart(self):
+        self.stop()
+        self.start()
+
+#如何把这个函数绑定到实例里呢？
+def run_server(obj,name):
+    print("runing is %s"%obj.restart(),name)
+
+if __name__ == "__main__":
+    server = WebServer("localhost",3306)
+    setattr(server,'run',run_server)  #通过setattr方法把test_run函数绑定到server这个实例里，方法名是"run"
+    server.run(server,"apache")'''
+delattr删除一个实例或者类中的方法
+'''
+import sys
+class WebServer(object):
+    def __init__(self,host,port):
+        self.host = host
+        self.port = port
+
+    def start(self):
+        print("Server is starting...")
+
+    def stop(self):
+        print("Server is stopping")
+
+    def restart(self):
+        self.stop()
+        self.start()
+
+def run_server(name):
+    print("runing is %s",name)
+
+if __name__ == "__main__":
+    server = WebServer("localhost",3306)
+    setattr(server,'run',run_server)
+    delattr(WebServer, "start")    #删除类里面的方法
+    delattr(server, "host")        #删除实例的属性
+    delattr(server,'run')           #删除通过setattr添加到实例的属性
+    print(server.__dict__,WebServer.__dict__)  #查看
+```
